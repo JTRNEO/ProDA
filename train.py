@@ -14,15 +14,17 @@ from parser_train import parser_, relative_path_to_absolute_path
 
 from tqdm import tqdm
 from data import create_dataset
-from utils import get_logger
+from utils import get_logger, get_console_file_logger
 from models import adaptation_modelv2
 from metrics import runningScore, averageMeter
+from tensorboardX import SummaryWriter
 
 def train(opt, logger):
     torch.manual_seed(opt.seed)
     torch.cuda.manual_seed(opt.seed)
     np.random.seed(opt.seed)
     random.seed(opt.seed)
+    writer = SummaryWriter(log_dir=opt.logdir)
     ## create dataset
     device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     datasets = create_dataset(opt, logger)
@@ -36,11 +38,13 @@ def train(opt, logger):
 
     # load category anchors
     if opt.stage == 'stage1':
-        objective_vectors = torch.load(os.path.join(os.path.dirname(opt.resume_path), 'prototypes_on_{}_from_{}'.format(opt.tgt_dataset, opt.model_name)))
+        objective_vectors = torch.load(os.path.join(opt.logdir, 'prototypes_on_{}_from_{}'.format(opt.tgt_dataset, opt.model_name)))
         model.objective_vectors = torch.Tensor(objective_vectors).to(0)
 
     # begin training
-    save_path = os.path.join(opt.logdir,"from_{}_to_{}_on_{}_current_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
+    if not os.path.exists(os.path.join(opt.logdir, opt.stage)):
+        os.makedirs(os.path.join(opt.logdir, opt.stage))
+    save_path = os.path.join(opt.logdir, opt.stage, "from_{}_to_{}_on_{}_current_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
     model.iter = 0
     start_epoch = 0
     for epoch in range(start_epoch, opt.epochs):
@@ -84,26 +88,35 @@ def train(opt, logger):
                 if opt.stage == 'warm_up':
                     fmt_str = "Epochs [{:d}/{:d}] Iter [{:d}/{:d}]  loss_GTA: {:.4f}  loss_G: {:.4f}  loss_D: {:.4f} Time/Image: {:.4f}"
                     print_str = fmt_str.format(epoch+1, opt.epochs, i + 1, opt.train_iters, loss_GTA, loss_G, loss_D, time_meter.avg / opt.bs)
+                    writer.add_scalar('loss_seg/train_loss', (loss_GTA), i + 1)
+                    writer.add_scalar('loss_adv/train_loss', (loss_G), i + 1)
+                    writer.add_scalar('loss_D/train_loss', (loss_D), i + 1)
                 elif opt.stage == 'stage1':
                     fmt_str = "Epochs [{:d}/{:d}] Iter [{:d}/{:d}]  loss: {:.4f}  loss_CTS: {:.4f}  loss_consist: {:.4f} Time/Image: {:.4f}"
                     print_str = fmt_str.format(epoch+1, opt.epochs, i + 1, opt.train_iters, loss, loss_CTS, loss_consist, time_meter.avg / opt.bs)
+                    writer.add_scalar('loss_src/train_loss', (loss), i + 1)
+                    writer.add_scalar('loss_tgt/train_loss', (loss_CTS), i + 1)
+                    writer.add_scalar('loss_consist/train_loss', (loss_consist), i + 1)
                 else:
                     fmt_str = "Epochs [{:d}/{:d}] Iter [{:d}/{:d}]  loss_GTA: {:.4f}  loss: {:.4f} Time/Image: {:.4f}"
                     print_str = fmt_str.format(epoch+1, opt.epochs, i + 1, opt.train_iters, loss_GTA, loss, time_meter.avg / opt.bs)
+                    writer.add_scalar('loss_seg/train_loss', (loss_GTA), i + 1)
+                    writer.add_scalar('loss/train_loss', (loss), i + 1)
                 print(print_str)
                 logger.info(print_str)
                 time_meter.reset()
 
             # evaluation
             if (i + 1) % opt.val_interval == 0:
-                validation(model, logger, datasets, device, running_metrics_val, iters = model.iter, opt=opt)
+                validation(model, logger, datasets, device, running_metrics_val, iters = model.iter, opt=opt, writer=writer)
                 torch.cuda.empty_cache()
                 logger.info('Best iou until now is {}'.format(model.best_iou))
 
             model.scheduler_step()
 
-def validation(model, logger, datasets, device, running_metrics_val, iters, opt=None):
+def validation(model, logger, datasets, device, running_metrics_val, iters, opt=None, writer=None):
     iters = iters
+    writer = writer
     _k = -1
     for v in model.optimizers:
         _k += 1
@@ -121,10 +134,10 @@ def validation(model, logger, datasets, device, running_metrics_val, iters, opt=
     for k, v in score.items():
         print(k, v)
         logger.info('{}: {}'.format(k, v))
-
+        writer.add_scalar('{}2{}/{}'.format(opt.src_dataset, opt.tgt_dataset, k), v, iters)
     for k, v in class_iou.items():
         logger.info('{}: {}'.format(k, v))
-
+        writer.add_scalar('{}2{}/{}'.format(opt.src_dataset, opt.tgt_dataset, k), v, iters)
     running_metrics_val.reset()
 
     torch.cuda.empty_cache()
@@ -141,7 +154,7 @@ def validation(model, logger, datasets, device, running_metrics_val, iters, opt=
         state[net.__class__.__name__] = new_state
     state['iter'] = iters + 1
     state['best_iou'] = score["Mean IoU : \t"]
-    save_path = os.path.join(opt.logdir,"from_{}_to_{}_on_{}_current_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
+    save_path = os.path.join(opt.logdir, opt.stage, "from_{}_to_{}_on_{}_current_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
     torch.save(state, save_path)
 
     if score["Mean IoU : \t"] >= model.best_iou:
@@ -160,7 +173,7 @@ def validation(model, logger, datasets, device, running_metrics_val, iters, opt=
             state[net.__class__.__name__] = new_state
         state['iter'] = iters + 1
         state['best_iou'] = model.best_iou
-        save_path = os.path.join(opt.logdir,"from_{}_to_{}_on_{}_best_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
+        save_path = os.path.join(opt.logdir, opt.stage, "from_{}_to_{}_on_{}_best_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name))
         torch.save(state, save_path)
         return score["Mean IoU : \t"]
 
@@ -190,6 +203,6 @@ if __name__ == "__main__":
     if not os.path.exists(opt.logdir):
         os.makedirs(opt.logdir)
 
-    logger = get_logger(opt.logdir)
+    logger = get_console_file_logger(name = 'ProDA', logdir=opt.logdir)
 
     train(opt, logger)

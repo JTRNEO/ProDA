@@ -11,6 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
 from parser_train import parser_, relative_path_to_absolute_path
+from utils import get_console_file_logger
 
 from tqdm import tqdm
 from data import create_dataset
@@ -50,7 +51,7 @@ def label2rgb(func, label):
     return rgbs
 
 def validate(valid_loader, device, model, opt):
-    ori_LP = os.path.join(opt.root, 'Code/ProDA', opt.save_path, opt.name)
+    ori_LP = os.path.join(opt.logdir, opt.save_path)
 
     if not os.path.exists(ori_LP):
         os.makedirs(ori_LP)
@@ -67,7 +68,7 @@ def validate(valid_loader, device, model, opt):
             threshold_arg = F.softmax(out['out'], dim=1)
             for k in range(labels_val.shape[0]):
                 name = os.path.basename(filename[k])
-                np.save(os.path.join(ori_LP, name.replace('.png', '.npy')), threshold_arg[k].cpu().numpy())
+                np.save(os.path.join(ori_LP, name.replace('.tif', '.npy')), threshold_arg[k].cpu().numpy())
         else:
             if opt.flip:
                 flip_out = model.BaseNet_DP(fliplr(images_val))
@@ -82,8 +83,8 @@ def validate(valid_loader, device, model, opt):
                 name = os.path.basename(filename[k])
                 Image.fromarray(pseudo[k,0].cpu().numpy().astype(np.uint8)).save(os.path.join(ori_LP, name))
                 Image.fromarray(pseudo_rgb[k].permute(1,2,0).cpu().numpy().astype(np.uint8)).save(os.path.join(ori_LP, name[:-4] + '_color.png'))
-                np.save(os.path.join(ori_LP, name.replace('.png', '_conf.npy')), confidence[k, 0].cpu().numpy().astype(np.float16))
-                #np.save(os.path.join(ori_LP, name.replace('.png', '_entropy.npy')), entropy[k, 0].cpu().numpy().astype(np.float16))
+                np.save(os.path.join(ori_LP, name.replace('.tif', '_conf.npy')), confidence[k, 0].cpu().numpy().astype(np.float16))
+                #np.save(os.path.join(ori_LP, name.replace('.tif', '_entropy.npy')), entropy[k, 0].cpu().numpy().astype(np.float16))
                 
 def get_logger(logdir):
     logger = logging.getLogger('ptsemseg')
@@ -104,7 +105,7 @@ if __name__ == "__main__":
     opt = parser.parse_args()
 
     opt = relative_path_to_absolute_path(opt)
-    opt.logdir = opt.logdir.replace(opt.name, 'debug')
+    # opt.logdir = opt.logdir.replace(opt.name, 'debug')
     opt.noaug = True
     opt.noshuffle = True
 
@@ -112,7 +113,7 @@ if __name__ == "__main__":
     if not os.path.exists(opt.logdir):
         os.makedirs(opt.logdir)
 
-    logger = get_logger(opt.logdir)
+    logger = get_console_file_logger(name = 'ProDA', logdir=opt.logdir)
 
     test(opt, logger)
 

@@ -130,3 +130,6 @@ dmypy.json
 
 config.py
 submit_ssh.py
+
+pretrained/
+logs*/

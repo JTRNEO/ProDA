@@ -12,6 +12,7 @@ import torch.nn.functional as F
 from PIL import Image
 from parser_train import parser_, relative_path_to_absolute_path
 from tqdm import tqdm
+from utils import get_console_file_logger
 
 from data import create_dataset
 from models import adaptation_modelv2
@@ -64,9 +65,9 @@ def calc_prototype(opt, logger):
                         model.update_objective_SingleVector(ids[t], vectors[t].detach().cpu(), 'mean')
 
     if opt.source:
-        save_path = os.path.join(os.path.dirname(opt.resume_path), "prototypes_on_{}_from_{}".format(opt.src_dataset, opt.model_name))
+        save_path = os.path.join(opt.logdir, "prototypes_on_{}_from_{}".format(opt.src_dataset, opt.model_name))
     else:
-        save_path = os.path.join(os.path.dirname(opt.resume_path), "prototypes_on_{}_from_{}".format(opt.tgt_dataset, opt.model_name))
+        save_path = os.path.join(opt.logdir, "prototypes_on_{}_from_{}".format(opt.tgt_dataset, opt.model_name))
     torch.save(model.objective_vectors, save_path)
 
 class Class_Features:
@@ -142,7 +143,7 @@ if __name__ == "__main__":
     opt = parser.parse_args()
 
     opt = relative_path_to_absolute_path(opt)
-    opt.logdir = opt.logdir.replace(opt.name, 'debug')
+    # opt.logdir = opt.logdir.replace(opt.name, 'debug')
     opt.noaug = True
     opt.noshuffle = True
     opt.epochs = 4
@@ -152,7 +153,7 @@ if __name__ == "__main__":
     if not os.path.exists(opt.logdir):
         os.makedirs(opt.logdir)
 
-    logger = get_logger(opt.logdir)
+    logger = get_console_file_logger(name = 'ProDA', logdir=opt.logdir)
 
     calc_prototype(opt, logger)
 

@@ -7,6 +7,7 @@ import torch.utils.data
 from data.base_dataset import BaseDataset
 from data.augmentations import *
 from data.DataProvider import DataProvider
+
 # import data.cityscapes_dataset
 
 def find_dataset_using_name(name):
@@ -16,11 +17,17 @@ def find_dataset_using_name(name):
     be instantiated. It has to be a subclass of BaseDataset,
     and it is case-insensitive.
     """
-    dataset_filename = "data." + name + "_dataset"
-    datasetlib = importlib.import_module(dataset_filename)
-
+    if name in ['gt5', 'synthia', 'cityscapes']:
+        dataset_filename = "data." + name + "_dataset"
+        datasetlib = importlib.import_module(dataset_filename)
+    else:
+        dataset_filename = "data." + 'continent' + "_dataset"
+        datasetlib = importlib.import_module(dataset_filename)
     dataset = None
-    target_dataset_name = name + '_loader'
+    if name in ['gt5', 'synthia', 'cityscapes']:
+        target_dataset_name = name + '_loader'
+    else:
+        target_dataset_name = 'continent' + '_loader'
     for _name, cls in datasetlib.__dict__.items():
         if _name.lower() == target_dataset_name.lower() \
            and issubclass(cls, BaseDataset):
@@ -55,7 +62,10 @@ def create_dataset(opt, logger):
 def get_composed_augmentations(opt):
     return Compose([RandomSized(opt.resize),
                     RandomCrop(opt.rcrop),
-                    RandomHorizontallyFlip(opt.hflip)])
+                    RandomHorizontallyFlip(opt.hflip),
+                    #RandomVerticallyFlip(opt.hflip),
+                    #RandomRotate(90)
+                    ])
 
 class CustomDatasetDataLoader():
     def __init__(self, opt, logger):
@@ -65,14 +75,14 @@ class CustomDatasetDataLoader():
         # status == 'train':
         source_train = find_dataset_using_name(opt.src_dataset)
         data_aug = None if opt.noaug else get_composed_augmentations(opt)
-        self.source_train = source_train(opt, logger, augmentations=data_aug)
+        self.source_train = source_train(opt, logger, augmentations=data_aug, split='train', flag='src')
         logger.info("{} source dataset has been created".format(self.source_train.__class__.__name__))
         print("dataset {} for source was created".format(self.source_train.__class__.__name__))
         self.source_train[0]
 
         data_aug = None if opt.noaug else get_composed_augmentations(opt)
         target_train = find_dataset_using_name(opt.tgt_dataset)
-        self.target_train = target_train(opt, logger, augmentations=data_aug, split='train')
+        self.target_train = target_train(opt, logger, augmentations=data_aug, split='val', flag='tgt')
         logger.info("{} target dataset has been created".format(self.target_train.__class__.__name__))
         print("dataset {} for target was created".format(self.target_train.__class__.__name__))
         self.target_train[0]
@@ -83,7 +93,7 @@ class CustomDatasetDataLoader():
             batch_size=opt.bs,
             shuffle=not opt.noshuffle,
             num_workers=int(opt.num_workers),
-            drop_last=True,
+            drop_last=not opt.no_droplast,
             pin_memory=True,
         )
         self.target_train_loader = torch.utils.data.DataLoader(
@@ -103,7 +113,8 @@ class CustomDatasetDataLoader():
         self.target_valid_loader = None
 
         target_valid = find_dataset_using_name(opt.tgt_dataset)
-        self.target_valid = target_valid(opt, logger, augmentations=None, split='val')
+        self.target_valid = target_valid(opt, logger, augmentations=None, split='val', flag='eval')
+        self.target_valid[0]
         logger.info("{} target_valid dataset has been created".format(self.target_valid.__class__.__name__))
         print("dataset {} for target_valid was created".format(self.target_valid.__class__.__name__))
 

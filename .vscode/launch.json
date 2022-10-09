@@ -1,0 +1,127 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: stage2",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--model_name", "deeplabv2",
+                "--stage", "stage2",
+                "--path_LP", "Pseudo/stage1",
+                "--n_class","8",
+                "--S_pseudo", "1",
+                "--threshold", "0.95",
+                "--distillation", "1",
+                "--finetune",
+                "--lr", "6e-4",
+                "--student_init", "simclr",
+                "--bn_clr",
+                "--no_resume",
+                "--used_save_pseudo",
+                "--bn_clr",
+            ]
+        },
+        {
+            "name": "Python: generate_pseudo_label2",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--flip",
+                "--stage",
+                "stage2",
+                "--n_class",
+                "8",
+                "--save_path",
+                "Pseudo/stage1",
+                "--no_droplast"
+            ]
+        },
+        {
+            "name": "Python: stage1",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--model_name",
+                "deeplabv2",
+                "--stage",
+                "stage1",
+                "--n_class",
+                "8",
+                "--used_save_pseudo",
+                "--ema",
+                "--proto_rectify",
+                "--moving_prototype",
+                "--proto_consistW",
+                "10",
+                "--rce"
+            ]
+        },
+        {
+            "name": "Python: calc_prototype",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--resume_path",
+                "./logs_debug/Africa2Asia/from_Africa_to_Asia_on_deeplabv2_best_model.pkl",
+                "--n_class",
+                "8"
+            ]
+        },
+        {
+            "name": "Python: generate_pseudo_label1",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--soft",
+                "--stage",
+                "stage1",
+                "--n_class",
+                "8",
+                "--save_path",
+                "Pseudo/warmup",
+                "--no_droplast"
+            ]
+        },
+        {
+            "name": "Python: train_warm_up",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--model_name",
+                "deeplabv2",
+                "--stage",
+                "warm_up",
+                "--freeze_bn",
+                "--gan",
+                "LS",
+                "--lr",
+                "2.5e-4",
+                "--adv",
+                "0.01",
+                "--no_resume"
+            ]
+        }
+    ]
+}

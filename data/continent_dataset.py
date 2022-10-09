@@ -9,12 +9,14 @@ from tqdm import tqdm
 
 from torch.utils import data
 from PIL import Image
+import glob
 
 from data.augmentations import *
 from data.base_dataset import BaseDataset
 from data.randaugment import RandAugmentMC
 
 import random
+
 
 def recursive_glob(rootdir=".", suffix=""):
     """Performs recursive glob with given suffix and rootdir 
@@ -28,7 +30,7 @@ def recursive_glob(rootdir=".", suffix=""):
         if filename.endswith(suffix)
     ]
 
-class Cityscapes_loader(BaseDataset):
+class Continent_loader(BaseDataset):
     """cityscapesLoader
 
     https://www.cityscapes-dataset.com
@@ -40,36 +42,24 @@ class Cityscapes_loader(BaseDataset):
     https://github.com/fvisin/dataset_loaders/blob/master/dataset_loaders/images/cityscapes.py
     """
 
-    colors = [  # [  0,   0,   0],
-        [128, 64, 128],
-        [244, 35, 232],
-        [70, 70, 70],
-        [102, 102, 156],
-        [190, 153, 153],
-        [153, 153, 153],
-        [250, 170, 30],
-        [220, 220, 0],
-        [107, 142, 35],
-        [152, 251, 152],
-        [0, 130, 180],
-        [220, 20, 60],
-        [255, 0, 0],
-        [0, 0, 142],
-        [0, 0, 70],
-        [0, 60, 100],
-        [0, 80, 100],
-        [0, 0, 230],
-        [119, 11, 32],
+    colors = [ [128, 0, 0],
+               [0, 255, 36],
+               [148, 148, 148],
+               [255, 255, 255],
+               [34, 97, 38],
+               [0, 69, 255],
+               [75, 181, 73],
+               [222, 31, 7]
     ]
 
-    label_colours = dict(zip(range(19), colors))
+    label_colours = dict(zip(range(8), colors))
 
     mean_rgb = {
-        "pascal": [103.939, 116.779, 123.68],
-        "cityscapes": [0.0, 0.0, 0.0],
+        # "pascal": [103.939, 116.779, 123.68],
+        "continent": [0.0, 0.0, 0.0],
     }  # pascal mean for PSPNet and ICNet pre-trained model
 
-    def __init__(self, opt, logger, augmentations = None, split='train'):
+    def __init__(self, opt, logger, augmentations = None, split='train', flag='src'):
         """__init__
 
         :param opt: parameters of dataset
@@ -79,73 +69,56 @@ class Cityscapes_loader(BaseDataset):
         """
         
         self.opt = opt
-        self.root = opt.tgt_rootpath
         self.split = split
+        self.flag = flag
+        self.root = opt.src_rootpath if self.flag == 'src' else opt.tgt_rootpath
         self.augmentations = augmentations
         self.randaug = RandAugmentMC(2, 10)
         self.n_classes = opt.n_class
-        self.img_size = (2048, 1024)
-        self.mean = np.array(self.mean_rgb['cityscapes'])
-        self.files = {}
-        self.paired_files = {}
+        self.img_size = (1024, 1024)
+        self.mean = np.array(self.mean_rgb['continent'])
+        # self.files = {}
+        # self.paired_files = {}
 
-        self.images_base = os.path.join(self.root, "leftImg8bit", self.split)
-        self.annotations_base = os.path.join(
-            self.root, "gtFine", self.split
-        )
-
-        self.files = sorted(recursive_glob(rootdir=self.images_base, suffix=".png")) #find all files from rootdir and subfolders with suffix = ".png"
-
-        #self.void_classes = [0, 1, 2, 3, 4, 5, 6, 9, 10, 14, 15, 16, 18, 29, 30, -1]
-        if self.n_classes == 19:
-            self.valid_classes = [7, 8, 11, 12, 13, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 31, 32, 33,]
-            self.class_names = ["unlabelled","road","sidewalk","building","wall",
-                "fence","pole","traffic_light","traffic_sign","vegetation",
-                "terrain","sky","person","rider","car",
-                "truck","bus","train","motorcycle","bicycle",
-            ]
-            self.to19 = dict(zip(range(19), range(19)))
-        elif self.n_classes == 16:
-            self.valid_classes = [7, 8, 11, 12, 13, 17, 19, 20, 21, 23, 24, 25, 26, 28, 32, 33,]
-            self.class_names = ["unlabelled","road","sidewalk","building","wall",
-                "fence","pole","traffic_light","traffic_sign","vegetation",
-                "sky","person","rider","car","bus",
-                "motorcycle","bicycle",
-            ]
-            self.to19 = dict(zip(range(16), [0,1,2,3,4,5,6,7,8,10,11,12,13,15,17,18]))
-        elif self.n_classes == 13:
-            self.valid_classes = [7, 8, 11, 19, 20, 21, 23, 24, 25, 26, 28, 32, 33,]
-            self.class_names = ["unlabelled","road","sidewalk","building","traffic_light",
-                "traffic_sign","vegetation","sky","person","rider",
-                "car","bus","motorcycle","bicycle",
-            ]
-            self.to19 = dict(zip(range(13), [0,1,2,6,7,8,10,11,12,13,15,17,18]))
+        self.images_base = os.path.join(self.root, 'images', self.split)
+        self.annotations_base = os.path.join(self.root, "labels", self.split)
+        rgb_filepath_list = glob.glob(os.path.join(self.images_base, '*.tif'))
+        rgb_filepath_list += glob.glob(os.path.join(self.images_base, '*.png'))
+        # files = sorted(recursive_glob(rootdir=self.images_base, suffix=".png")) #find all files from rootdir and subfolders with suffix = ".png"
+        # files += sorted(recursive_glob(rootdir=self.images_base, suffix=".tif"))
+        rgb_filename_list = [os.path.split(fp)[-1] for fp in rgb_filepath_list]
+        cls_filepath_list = []
+        if self.annotations_base is not None:
+            for fname in rgb_filename_list:
+                cls_filepath_list.append(os.path.join(self.annotations_base, fname))
+        self.rgb_filepath_list = rgb_filepath_list
+        self.cls_filepath_list = cls_filepath_list
+        
+        self.valid_classes = [1, 2, 3, 4, 5, 6, 7, 8]
+        self.class_names = ["bareland", "grass", "pavement", "road", "tree", "water", "cropland", "buildings"]
+        self.to8 = dict(zip(range(8), range(8)))
 
         self.ignore_index = 250
         self.class_map = dict(zip(self.valid_classes, range(self.n_classes)))   #zip: return tuples
 
-        if not self.files:
+        if not self.rgb_filepath_list:
             raise Exception(
                 "No files for split=[%s] found in %s" % (self.split, self.images_base)
             )
 
-        print("Found %d %s images" % (len(self.files), self.split))
+        print("Found %d %s images" % (len(self.rgb_filepath_list), self.split))
     
     def __len__(self):
         """__len__"""
-        return len(self.files)
+        return len(self.rgb_filepath_list)
 
     def __getitem__(self, index):
         """__getitem__
 
         :param index:
         """
-        img_path = self.files[index].rstrip()
-        lbl_path = os.path.join(
-            self.annotations_base,
-            img_path.split(os.sep)[-2],
-            os.path.basename(img_path)[:-15] + "gtFine_labelIds.png",
-        )
+        img_path = self.rgb_filepath_list[index].rstrip()
+        lbl_path = self.cls_filepath_list[index].rstrip()
 
         img = Image.open(img_path)
         lbl = Image.open(lbl_path)
@@ -162,16 +135,16 @@ class Cityscapes_loader(BaseDataset):
         img_full = img_full.transpose(2, 0, 1)
 
         lp, lpsoft, weak_params = None, None, None
-        if self.split == 'train' and self.opt.used_save_pseudo:
+        if self.split == 'val' and self.flag == 'tgt' and self.opt.used_save_pseudo:
             if self.opt.proto_rectify:
-                lpsoft = np.load(os.path.join(self.opt.path_soft, os.path.basename(img_path).replace('.png', '.npy')))
+                lpsoft = np.load(os.path.join(self.opt.path_soft, os.path.basename(img_path).replace('.tif', '.npy')))
             else:
                 lp_path = os.path.join(self.opt.path_LP, os.path.basename(img_path))
                 lp = Image.open(lp_path)
                 lp = lp.resize(self.img_size, Image.NEAREST)
                 lp = np.array(lp, dtype=np.uint8)
                 if self.opt.threshold:
-                    conf = np.load(os.path.join(self.opt.path_LP, os.path.basename(img_path).replace('.png', '_conf.npy')))
+                    conf = np.load(os.path.join(self.opt.path_LP, os.path.basename(img_path).replace('.tif', '_conf.npy')))
                     lp[conf <= self.opt.threshold] = 250
 
         input_dict = {}
@@ -190,7 +163,7 @@ class Cityscapes_loader(BaseDataset):
         input_dict['lp'] = lp
         input_dict['lpsoft'] = lpsoft
         input_dict['weak_params'] = weak_params  #full2weak
-        input_dict['img_path'] = self.files[index]
+        input_dict['img_path'] = self.rgb_filepath_list[index]
 
         input_dict = {k:v for k, v in input_dict.items() if v is not None}
         return input_dict
@@ -243,9 +216,9 @@ class Cityscapes_loader(BaseDataset):
         g = temp.copy()
         b = temp.copy()
         for l in range(0, self.n_classes):
-            r[temp == l] = self.label_colours[self.to19[l]][0]
-            g[temp == l] = self.label_colours[self.to19[l]][1]
-            b[temp == l] = self.label_colours[self.to19[l]][2]
+            r[temp == l] = self.label_colours[self.to8[l]][0]
+            g[temp == l] = self.label_colours[self.to8[l]][1]
+            b[temp == l] = self.label_colours[self.to8[l]][2]
 
         rgb = np.zeros((temp.shape[0], temp.shape[1], 3))
         rgb[:, :, 0] = r / 255.0
@@ -261,8 +234,8 @@ class Cityscapes_loader(BaseDataset):
         return label_copy
 
     def get_cls_num_list(self):
-        cls_num_list = np.array([1557726944,  254364912,  673500400,   18431664,   14431392,
-                                29361440,    7038112,    7352368,  477239920,   40134240,
-                                211669120,   36057968,     865184,  264786464,   17128544,
-                                2385680,     943312,     504112,    2174560])
-        return cls_num_list
+        # cls_num_list = np.array([1557726944,  254364912,  673500400,   18431664,   14431392,
+        #                         29361440,    7038112,    7352368,  477239920,   40134240,
+        #                         211669120,   36057968,     865184,  264786464,   17128544,
+        #                         2385680,     943312,     504112,    2174560])
+        return None

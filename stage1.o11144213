@@ -1,0 +1,84 @@
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3448: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn("Default grid_sample and affine_grid behavior has changed "
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3385: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn("Default grid_sample and affine_grid behavior has changed "
+RUNDIR: /home/songjian/project/ProDA/logs_debug/Africa2Asia
+Found 592 train images
+dataset Continent_loader for source was created
+Found 247 val images
+dataset Continent_loader for target was created
+Found 247 val images
+dataset Continent_loader for target_valid was created
+Epochs [1/80] Iter [20/90000]  loss: 5.2269  loss_CTS: 4.4584  loss_consist: 0.0768 Time/Image: 1.1215
+Epochs [1/80] Iter [40/90000]  loss: 4.9184  loss_CTS: 4.1001  loss_consist: 0.0818 Time/Image: 0.9742
+Epochs [1/80] Iter [60/90000]  loss: 6.1365  loss_CTS: 5.2791  loss_consist: 0.0857 Time/Image: 0.9746
+Epochs [2/80] Iter [80/90000]  loss: 5.1021  loss_CTS: 4.3224  loss_consist: 0.0780 Time/Image: 0.9744
+Epochs [2/80] Iter [100/90000]  loss: 4.9184  loss_CTS: 4.1964  loss_consist: 0.0722 Time/Image: 0.9740
+Epochs [2/80] Iter [120/90000]  loss: 4.5604  loss_CTS: 3.7521  loss_consist: 0.0808 Time/Image: 0.9744
+Epochs [3/80] Iter [140/90000]  loss: 4.1917  loss_CTS: 3.5896  loss_consist: 0.0602 Time/Image: 0.9743
+Epochs [3/80] Iter [160/90000]  loss: 4.9826  loss_CTS: 4.4584  loss_consist: 0.0524 Time/Image: 0.9763
+Epochs [3/80] Iter [180/90000]  loss: 5.0821  loss_CTS: 4.3650  loss_consist: 0.0717 Time/Image: 0.9741
+Epochs [4/80] Iter [200/90000]  loss: 4.1445  loss_CTS: 3.5411  loss_consist: 0.0603 Time/Image: 0.9745
+Epochs [4/80] Iter [220/90000]  loss: 4.0460  loss_CTS: 3.4749  loss_consist: 0.0571 Time/Image: 0.9745
+Epochs [4/80] Iter [240/90000]  loss: 3.8314  loss_CTS: 3.2211  loss_consist: 0.0610 Time/Image: 0.9745
+Epochs [5/80] Iter [260/90000]  loss: 4.4894  loss_CTS: 3.8686  loss_consist: 0.0621 Time/Image: 0.9756
+Epochs [5/80] Iter [280/90000]  loss: 5.0802  loss_CTS: 4.4532  loss_consist: 0.0627 Time/Image: 0.9741
+Epochs [5/80] Iter [300/90000]  loss: 4.1644  loss_CTS: 3.6644  loss_consist: 0.0500 Time/Image: 0.9745
+Epochs [6/80] Iter [320/90000]  loss: 4.4416  loss_CTS: 4.0070  loss_consist: 0.0435 Time/Image: 0.9745
+Epochs [6/80] Iter [340/90000]  loss: 3.6489  loss_CTS: 2.8669  loss_consist: 0.0782 Time/Image: 0.9739
+Epochs [6/80] Iter [360/90000]  loss: 3.2204  loss_CTS: 2.8300  loss_consist: 0.0390 Time/Image: 0.9740
+Epochs [7/80] Iter [380/90000]  loss: 3.9885  loss_CTS: 3.3385  loss_consist: 0.0650 Time/Image: 0.9743
+Epochs [7/80] Iter [400/90000]  loss: 3.7337  loss_CTS: 2.8185  loss_consist: 0.0915 Time/Image: 0.9747
+Epochs [7/80] Iter [420/90000]  loss: 3.4446  loss_CTS: 2.9589  loss_consist: 0.0486 Time/Image: 0.9744
+Epochs [8/80] Iter [440/90000]  loss: 5.4247  loss_CTS: 4.6729  loss_consist: 0.0752 Time/Image: 0.9740
+Epochs [8/80] Iter [460/90000]  loss: 2.8935  loss_CTS: 2.3789  loss_consist: 0.0515 Time/Image: 0.9747
+Epochs [8/80] Iter [480/90000]  loss: 3.5544  loss_CTS: 3.1047  loss_consist: 0.0450 Time/Image: 0.9750
+Epochs [9/80] Iter [500/90000]  loss: 3.8030  loss_CTS: 3.2664  loss_consist: 0.0537 Time/Image: 0.9743
+Epochs [9/80] Iter [520/90000]  loss: 3.4985  loss_CTS: 3.0003  loss_consist: 0.0498 Time/Image: 0.9741
+Epochs [9/80] Iter [540/90000]  loss: 3.8278  loss_CTS: 2.8363  loss_consist: 0.0991 Time/Image: 0.9744
+Epochs [10/80] Iter [560/90000]  loss: 3.5863  loss_CTS: 2.9786  loss_consist: 0.0608 Time/Image: 0.9747
+Epochs [10/80] Iter [580/90000]  loss: 4.3160  loss_CTS: 3.5484  loss_consist: 0.0768 Time/Image: 0.9742
+Epochs [10/80] Iter [600/90000]  loss: 3.2500  loss_CTS: 2.8103  loss_consist: 0.0440 Time/Image: 0.9746
+Epochs [11/80] Iter [620/90000]  loss: 2.9091  loss_CTS: 2.4809  loss_consist: 0.0428 Time/Image: 0.9744
+Epochs [11/80] Iter [640/90000]  loss: 5.5093  loss_CTS: 4.8641  loss_consist: 0.0645 Time/Image: 0.9742
+Epochs [11/80] Iter [660/90000]  loss: 2.8497  loss_CTS: 2.4584  loss_consist: 0.0391 Time/Image: 0.9760
+Epochs [12/80] Iter [680/90000]  loss: 3.9455  loss_CTS: 2.8938  loss_consist: 0.1052 Time/Image: 0.9739
+Epochs [12/80] Iter [700/90000]  loss: 3.7703  loss_CTS: 3.1380  loss_consist: 0.0632 Time/Image: 0.9741
+Epochs [12/80] Iter [720/90000]  loss: 3.6009  loss_CTS: 3.0412  loss_consist: 0.0560 Time/Image: 0.9751
+Epochs [13/80] Iter [740/90000]  loss: 3.3577  loss_CTS: 2.8019  loss_consist: 0.0556 Time/Image: 0.9746
+Epochs [13/80] Iter [760/90000]  loss: 3.0573  loss_CTS: 2.4879  loss_consist: 0.0569 Time/Image: 0.9871
+Epochs [13/80] Iter [780/90000]  loss: 4.0429  loss_CTS: 3.4623  loss_consist: 0.0581 Time/Image: 1.0323
+Epochs [14/80] Iter [800/90000]  loss: 3.4577  loss_CTS: 3.0639  loss_consist: 0.0394 Time/Image: 0.9741
+Epochs [14/80] Iter [820/90000]  loss: 3.9407  loss_CTS: 3.4942  loss_consist: 0.0447 Time/Image: 0.9740
+Epochs [14/80] Iter [840/90000]  loss: 4.3697  loss_CTS: 2.8932  loss_consist: 0.1477 Time/Image: 0.9746
+Epochs [15/80] Iter [860/90000]  loss: 4.4889  loss_CTS: 3.8436  loss_consist: 0.0645 Time/Image: 0.9768
+Epochs [15/80] Iter [880/90000]  loss: 3.2510  loss_CTS: 2.8884  loss_consist: 0.0363 Time/Image: 0.9741
+Epochs [15/80] Iter [900/90000]  loss: 2.8752  loss_CTS: 2.5353  loss_consist: 0.0340 Time/Image: 0.9742
+Epochs [16/80] Iter [920/90000]  loss: 3.4922  loss_CTS: 3.0073  loss_consist: 0.0485 Time/Image: 0.9748
+Epochs [16/80] Iter [940/90000]  loss: 3.1246  loss_CTS: 2.4629  loss_consist: 0.0662 Time/Image: 0.9744
+Epochs [16/80] Iter [960/90000]  loss: 3.3520  loss_CTS: 2.9298  loss_consist: 0.0422 Time/Image: 0.9735
+Epochs [17/80] Iter [980/90000]  loss: 3.3492  loss_CTS: 2.5466  loss_consist: 0.0803 Time/Image: 0.9740
+Epochs [17/80] Iter [1000/90000]  loss: 4.3063  loss_CTS: 3.8551  loss_consist: 0.0451 Time/Image: 0.9744
+  0%|          | 0/62 [00:00<?, ?it/s]  2%|▏         | 1/62 [00:02<02:11,  2.16s/it]  3%|▎         | 2/62 [00:03<01:47,  1.80s/it]  5%|▍         | 3/62 [00:05<01:35,  1.61s/it]  6%|▋         | 4/62 [00:06<01:27,  1.52s/it]  8%|▊         | 5/62 [00:07<01:23,  1.46s/it] 10%|▉         | 6/62 [00:09<01:19,  1.42s/it] 11%|█▏        | 7/62 [00:10<01:16,  1.40s/it] 13%|█▎        | 8/62 [00:11<01:14,  1.38s/it] 15%|█▍        | 9/62 [00:13<01:12,  1.37s/it] 16%|█▌        | 10/62 [00:14<01:10,  1.37s/it] 18%|█▊        | 11/62 [00:15<01:09,  1.36s/it] 19%|█▉        | 12/62 [00:17<01:07,  1.36s/it] 21%|██        | 13/62 [00:18<01:05,  1.35s/it] 23%|██▎       | 14/62 [00:19<01:04,  1.34s/it] 24%|██▍       | 15/62 [00:21<01:02,  1.33s/it] 26%|██▌       | 16/62 [00:22<01:01,  1.33s/it] 27%|██▋       | 17/62 [00:23<00:59,  1.33s/it] 29%|██▉       | 18/62 [00:25<00:58,  1.33s/it] 31%|███       | 19/62 [00:26<00:57,  1.33s/it] 32%|███▏      | 20/62 [00:27<00:56,  1.33s/it] 34%|███▍      | 21/62 [00:29<00:54,  1.34s/it] 35%|███▌      | 22/62 [00:30<00:53,  1.33s/it] 37%|███▋      | 23/62 [00:31<00:52,  1.34s/it] 39%|███▊      | 24/62 [00:33<00:50,  1.33s/it] 40%|████      | 25/62 [00:34<00:49,  1.34s/it] 42%|████▏     | 26/62 [00:35<00:48,  1.33s/it] 44%|████▎     | 27/62 [00:37<00:46,  1.33s/it] 45%|████▌     | 28/62 [00:38<00:45,  1.33s/it] 47%|████▋     | 29/62 [00:39<00:43,  1.33s/it] 48%|████▊     | 30/62 [00:41<00:42,  1.33s/it] 50%|█████     | 31/62 [00:42<00:41,  1.33s/it] 52%|█████▏    | 32/62 [00:43<00:40,  1.33s/it] 53%|█████▎    | 33/62 [00:45<00:38,  1.33s/it] 55%|█████▍    | 34/62 [00:46<00:37,  1.33s/it] 56%|█████▋    | 35/62 [00:47<00:36,  1.34s/it] 58%|█████▊    | 36/62 [00:49<00:34,  1.34s/it] 60%|█████▉    | 37/62 [00:50<00:33,  1.34s/it] 61%|██████▏   | 38/62 [00:51<00:32,  1.34s/it] 63%|██████▎   | 39/62 [00:53<00:30,  1.33s/it] 65%|██████▍   | 40/62 [00:54<00:29,  1.33s/it] 66%|██████▌   | 41/62 [00:55<00:27,  1.33s/it] 68%|██████▊   | 42/62 [00:57<00:26,  1.33s/it] 69%|██████▉   | 43/62 [00:58<00:25,  1.33s/it] 71%|███████   | 44/62 [00:59<00:23,  1.33s/it] 73%|███████▎  | 45/62 [01:01<00:22,  1.33s/it] 74%|███████▍  | 46/62 [01:02<00:21,  1.33s/it] 76%|███████▌  | 47/62 [01:03<00:19,  1.33s/it] 77%|███████▋  | 48/62 [01:05<00:18,  1.33s/it] 79%|███████▉  | 49/62 [01:06<00:17,  1.34s/it] 81%|████████  | 50/62 [01:07<00:16,  1.34s/it] 82%|████████▏ | 51/62 [01:09<00:14,  1.34s/it] 84%|████████▍ | 52/62 [01:10<00:13,  1.33s/it] 85%|████████▌ | 53/62 [01:11<00:11,  1.33s/it] 87%|████████▋ | 54/62 [01:13<00:10,  1.33s/it] 89%|████████▊ | 55/62 [01:14<00:09,  1.33s/it] 90%|█████████ | 56/62 [01:15<00:08,  1.33s/it] 92%|█████████▏| 57/62 [01:17<00:06,  1.34s/it] 94%|█████████▎| 58/62 [01:18<00:05,  1.34s/it] 95%|█████████▌| 59/62 [01:19<00:04,  1.33s/it] 97%|█████████▋| 60/62 [01:21<00:02,  1.34s/it] 98%|█████████▊| 61/62 [01:22<00:01,  1.34s/it]100%|██████████| 62/62 [01:23<00:00,  1.29s/it]100%|██████████| 62/62 [01:23<00:00,  1.35s/it]
+Overall Acc: 	 0.6252235532949667
+Mean Acc : 	 0.5739985301941337
+FreqW Acc : 	 0.4751033717597576
+Mean IoU : 	 0.40033444221891223
+Traceback (most recent call last):
+  File "train.py", line 197, in <module>
+    train(opt, logger)
+  File "train.py", line 101, in train
+    validation(model, logger, datasets, device, running_metrics_val, iters = model.iter, opt=opt)
+  File "train.py", line 147, in validation
+    torch.save(state, save_path)
+  File "/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/serialization.py", line 369, in save
+    with _open_file_like(f, 'wb') as opened_file:
+  File "/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/songjian/project/ProDA/logs_debug/Africa2Asia/stage1/from_Africa_to_Asia_on_deeplabv2_current_model.pkl'

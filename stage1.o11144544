@@ -1,0 +1,587 @@
+2022-10-08 16:12:54, INFO:ProDA:Continent_loader source dataset has been created
+2022-10-08 16:12:55, INFO:ProDA:Continent_loader target dataset has been created
+2022-10-08 16:12:56, INFO:ProDA:Continent_loader target_valid dataset has been created
+2022-10-08 16:13:06, INFO:ProDA:the backbone is deeplabv2
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3103: UserWarning: The default behavior for interpolate/upsample with float scale_factor changed in 1.6.0 to align with other frameworks/libraries, and now uses scale_factor directly, instead of relying on the computed output size. If you wish to restore the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor changed "
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3448: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn("Default grid_sample and affine_grid behavior has changed "
+/home/songjian/.conda/envs/loveda/lib/python3.6/site-packages/torch/nn/functional.py:3385: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  warnings.warn("Default grid_sample and affine_grid behavior has changed "
+2022-10-08 16:14:50, INFO:ProDA:Epochs [1/80] Iter [20/90000]  loss: 5.0541  loss_CTS: 4.3986  loss_consist: 0.0656 Time/Image: 0.8522
+2022-10-08 16:16:11, INFO:ProDA:Epochs [1/80] Iter [40/90000]  loss: 4.7020  loss_CTS: 3.9337  loss_consist: 0.0768 Time/Image: 0.5508
+2022-10-08 16:17:31, INFO:ProDA:Epochs [1/80] Iter [60/90000]  loss: 6.1318  loss_CTS: 5.2535  loss_consist: 0.0878 Time/Image: 0.5513
+2022-10-08 16:18:43, INFO:ProDA:Epochs [2/80] Iter [80/90000]  loss: 4.8092  loss_CTS: 4.0968  loss_consist: 0.0712 Time/Image: 0.5501
+2022-10-08 16:19:53, INFO:ProDA:Epochs [2/80] Iter [100/90000]  loss: 4.9488  loss_CTS: 4.1829  loss_consist: 0.0766 Time/Image: 0.5494
+2022-10-08 16:21:03, INFO:ProDA:Epochs [2/80] Iter [120/90000]  loss: 4.5689  loss_CTS: 3.7767  loss_consist: 0.0792 Time/Image: 0.5505
+2022-10-08 16:22:14, INFO:ProDA:Epochs [3/80] Iter [140/90000]  loss: 4.2922  loss_CTS: 3.6567  loss_consist: 0.0635 Time/Image: 0.5492
+2022-10-08 16:23:20, INFO:ProDA:Epochs [3/80] Iter [160/90000]  loss: 5.1836  loss_CTS: 4.5920  loss_consist: 0.0592 Time/Image: 0.5502
+2022-10-08 16:24:25, INFO:ProDA:Epochs [3/80] Iter [180/90000]  loss: 5.2061  loss_CTS: 4.5040  loss_consist: 0.0702 Time/Image: 0.5515
+2022-10-08 16:25:29, INFO:ProDA:Epochs [4/80] Iter [200/90000]  loss: 4.1180  loss_CTS: 3.5316  loss_consist: 0.0586 Time/Image: 0.5511
+2022-10-08 16:26:33, INFO:ProDA:Epochs [4/80] Iter [220/90000]  loss: 4.0266  loss_CTS: 3.4260  loss_consist: 0.0601 Time/Image: 0.5506
+2022-10-08 16:27:36, INFO:ProDA:Epochs [4/80] Iter [240/90000]  loss: 3.8749  loss_CTS: 3.2716  loss_consist: 0.0603 Time/Image: 0.5500
+2022-10-08 16:28:41, INFO:ProDA:Epochs [5/80] Iter [260/90000]  loss: 4.5457  loss_CTS: 3.8605  loss_consist: 0.0685 Time/Image: 0.5535
+2022-10-08 16:29:45, INFO:ProDA:Epochs [5/80] Iter [280/90000]  loss: 5.2447  loss_CTS: 4.5913  loss_consist: 0.0653 Time/Image: 0.5495
+2022-10-08 16:30:48, INFO:ProDA:Epochs [5/80] Iter [300/90000]  loss: 4.1804  loss_CTS: 3.6975  loss_consist: 0.0483 Time/Image: 0.5507
+2022-10-08 16:31:52, INFO:ProDA:Epochs [6/80] Iter [320/90000]  loss: 4.3792  loss_CTS: 3.9421  loss_consist: 0.0437 Time/Image: 0.5489
+2022-10-08 16:32:56, INFO:ProDA:Epochs [6/80] Iter [340/90000]  loss: 3.7785  loss_CTS: 2.9015  loss_consist: 0.0877 Time/Image: 0.5488
+2022-10-08 16:34:00, INFO:ProDA:Epochs [6/80] Iter [360/90000]  loss: 3.3949  loss_CTS: 2.9747  loss_consist: 0.0420 Time/Image: 0.5477
+2022-10-08 16:35:04, INFO:ProDA:Epochs [7/80] Iter [380/90000]  loss: 3.8564  loss_CTS: 3.2569  loss_consist: 0.0599 Time/Image: 0.5491
+2022-10-08 16:36:07, INFO:ProDA:Epochs [7/80] Iter [400/90000]  loss: 3.8188  loss_CTS: 2.9025  loss_consist: 0.0916 Time/Image: 0.5493
+2022-10-08 16:37:11, INFO:ProDA:Epochs [7/80] Iter [420/90000]  loss: 3.5293  loss_CTS: 3.0388  loss_consist: 0.0491 Time/Image: 0.5489
+2022-10-08 16:38:14, INFO:ProDA:Epochs [8/80] Iter [440/90000]  loss: 5.2749  loss_CTS: 4.5545  loss_consist: 0.0720 Time/Image: 0.5490
+2022-10-08 16:39:18, INFO:ProDA:Epochs [8/80] Iter [460/90000]  loss: 2.9390  loss_CTS: 2.3862  loss_consist: 0.0553 Time/Image: 0.5502
+2022-10-08 16:40:22, INFO:ProDA:Epochs [8/80] Iter [480/90000]  loss: 3.7310  loss_CTS: 3.2050  loss_consist: 0.0526 Time/Image: 0.5497
+2022-10-08 16:41:26, INFO:ProDA:Epochs [9/80] Iter [500/90000]  loss: 3.7584  loss_CTS: 3.2967  loss_consist: 0.0462 Time/Image: 0.5513
+2022-10-08 16:42:29, INFO:ProDA:Epochs [9/80] Iter [520/90000]  loss: 3.4826  loss_CTS: 2.9553  loss_consist: 0.0527 Time/Image: 0.5504
+2022-10-08 16:43:33, INFO:ProDA:Epochs [9/80] Iter [540/90000]  loss: 3.8109  loss_CTS: 2.7969  loss_consist: 0.1014 Time/Image: 0.5505
+2022-10-08 16:44:37, INFO:ProDA:Epochs [10/80] Iter [560/90000]  loss: 3.6112  loss_CTS: 2.9996  loss_consist: 0.0612 Time/Image: 0.5508
+2022-10-08 16:45:41, INFO:ProDA:Epochs [10/80] Iter [580/90000]  loss: 4.1955  loss_CTS: 3.4468  loss_consist: 0.0749 Time/Image: 0.5507
+2022-10-08 16:46:45, INFO:ProDA:Epochs [10/80] Iter [600/90000]  loss: 3.2797  loss_CTS: 2.8140  loss_consist: 0.0466 Time/Image: 0.5486
+2022-10-08 16:47:48, INFO:ProDA:Epochs [11/80] Iter [620/90000]  loss: 2.8842  loss_CTS: 2.4918  loss_consist: 0.0392 Time/Image: 0.5472
+2022-10-08 16:48:52, INFO:ProDA:Epochs [11/80] Iter [640/90000]  loss: 5.3382  loss_CTS: 4.7137  loss_consist: 0.0624 Time/Image: 0.5487
+2022-10-08 16:49:56, INFO:ProDA:Epochs [11/80] Iter [660/90000]  loss: 2.8294  loss_CTS: 2.4603  loss_consist: 0.0369 Time/Image: 0.5488
+2022-10-08 16:50:59, INFO:ProDA:Epochs [12/80] Iter [680/90000]  loss: 3.8249  loss_CTS: 2.8386  loss_consist: 0.0986 Time/Image: 0.5490
+2022-10-08 16:52:02, INFO:ProDA:Epochs [12/80] Iter [700/90000]  loss: 3.7417  loss_CTS: 3.0786  loss_consist: 0.0663 Time/Image: 0.5490
+2022-10-08 16:53:07, INFO:ProDA:Epochs [12/80] Iter [720/90000]  loss: 3.6685  loss_CTS: 3.0537  loss_consist: 0.0615 Time/Image: 0.5514
+2022-10-08 16:54:10, INFO:ProDA:Epochs [13/80] Iter [740/90000]  loss: 3.3423  loss_CTS: 2.7811  loss_consist: 0.0561 Time/Image: 0.5518
+2022-10-08 16:55:14, INFO:ProDA:Epochs [13/80] Iter [760/90000]  loss: 3.1444  loss_CTS: 2.5247  loss_consist: 0.0620 Time/Image: 0.5514
+2022-10-08 16:56:18, INFO:ProDA:Epochs [13/80] Iter [780/90000]  loss: 3.8504  loss_CTS: 3.2918  loss_consist: 0.0559 Time/Image: 0.5488
+2022-10-08 16:57:21, INFO:ProDA:Epochs [14/80] Iter [800/90000]  loss: 3.3784  loss_CTS: 2.9711  loss_consist: 0.0407 Time/Image: 0.5483
+2022-10-08 16:58:25, INFO:ProDA:Epochs [14/80] Iter [820/90000]  loss: 4.0130  loss_CTS: 3.5131  loss_consist: 0.0500 Time/Image: 0.5484
+2022-10-08 16:59:29, INFO:ProDA:Epochs [14/80] Iter [840/90000]  loss: 4.1451  loss_CTS: 2.8217  loss_consist: 0.1323 Time/Image: 0.5507
+2022-10-08 17:00:33, INFO:ProDA:Epochs [15/80] Iter [860/90000]  loss: 4.5503  loss_CTS: 3.8559  loss_consist: 0.0694 Time/Image: 0.5498
+2022-10-08 17:01:36, INFO:ProDA:Epochs [15/80] Iter [880/90000]  loss: 3.3739  loss_CTS: 2.9967  loss_consist: 0.0377 Time/Image: 0.5482
+2022-10-08 17:02:40, INFO:ProDA:Epochs [15/80] Iter [900/90000]  loss: 2.8164  loss_CTS: 2.4718  loss_consist: 0.0345 Time/Image: 0.5490
+2022-10-08 17:03:45, INFO:ProDA:Epochs [16/80] Iter [920/90000]  loss: 3.5574  loss_CTS: 3.0567  loss_consist: 0.0501 Time/Image: 0.5487
+2022-10-08 17:04:48, INFO:ProDA:Epochs [16/80] Iter [940/90000]  loss: 3.0847  loss_CTS: 2.4529  loss_consist: 0.0632 Time/Image: 0.5488
+2022-10-08 17:05:52, INFO:ProDA:Epochs [16/80] Iter [960/90000]  loss: 3.3937  loss_CTS: 2.9733  loss_consist: 0.0420 Time/Image: 0.5503
+2022-10-08 17:06:56, INFO:ProDA:Epochs [17/80] Iter [980/90000]  loss: 3.3785  loss_CTS: 2.6030  loss_consist: 0.0776 Time/Image: 0.5489
+2022-10-08 17:07:59, INFO:ProDA:Epochs [17/80] Iter [1000/90000]  loss: 4.1481  loss_CTS: 3.7324  loss_consist: 0.0416 Time/Image: 0.5494
+2022-10-08 17:08:02, INFO:ProDA:learning rate is 9.900144440143462e-05 for ResNet101 net
+2022-10-08 17:08:02, INFO:ProDA:Successfully set the model eval mode
+RUNDIR: /home/songjian/project/ProDA/logs_debug/Africa2Asia
+Found 592 train images
+dataset Continent_loader for source was created
+Found 247 val images
+dataset Continent_loader for target was created
+Found 247 val images
+dataset Continent_loader for target_valid was created
+Epochs [1/80] Iter [20/90000]  loss: 5.0541  loss_CTS: 4.3986  loss_consist: 0.0656 Time/Image: 0.8522
+Epochs [1/80] Iter [40/90000]  loss: 4.7020  loss_CTS: 3.9337  loss_consist: 0.0768 Time/Image: 0.5508
+Epochs [1/80] Iter [60/90000]  loss: 6.1318  loss_CTS: 5.2535  loss_consist: 0.0878 Time/Image: 0.5513
+Epochs [2/80] Iter [80/90000]  loss: 4.8092  loss_CTS: 4.0968  loss_consist: 0.0712 Time/Image: 0.5501
+Epochs [2/80] Iter [100/90000]  loss: 4.9488  loss_CTS: 4.1829  loss_consist: 0.0766 Time/Image: 0.5494
+Epochs [2/80] Iter [120/90000]  loss: 4.5689  loss_CTS: 3.7767  loss_consist: 0.0792 Time/Image: 0.5505
+Epochs [3/80] Iter [140/90000]  loss: 4.2922  loss_CTS: 3.6567  loss_consist: 0.0635 Time/Image: 0.5492
+Epochs [3/80] Iter [160/90000]  loss: 5.1836  loss_CTS: 4.5920  loss_consist: 0.0592 Time/Image: 0.5502
+Epochs [3/80] Iter [180/90000]  loss: 5.2061  loss_CTS: 4.5040  loss_consist: 0.0702 Time/Image: 0.5515
+Epochs [4/80] Iter [200/90000]  loss: 4.1180  loss_CTS: 3.5316  loss_consist: 0.0586 Time/Image: 0.5511
+Epochs [4/80] Iter [220/90000]  loss: 4.0266  loss_CTS: 3.4260  loss_consist: 0.0601 Time/Image: 0.5506
+Epochs [4/80] Iter [240/90000]  loss: 3.8749  loss_CTS: 3.2716  loss_consist: 0.0603 Time/Image: 0.5500
+Epochs [5/80] Iter [260/90000]  loss: 4.5457  loss_CTS: 3.8605  loss_consist: 0.0685 Time/Image: 0.5535
+Epochs [5/80] Iter [280/90000]  loss: 5.2447  loss_CTS: 4.5913  loss_consist: 0.0653 Time/Image: 0.5495
+Epochs [5/80] Iter [300/90000]  loss: 4.1804  loss_CTS: 3.6975  loss_consist: 0.0483 Time/Image: 0.5507
+Epochs [6/80] Iter [320/90000]  loss: 4.3792  loss_CTS: 3.9421  loss_consist: 0.0437 Time/Image: 0.5489
+Epochs [6/80] Iter [340/90000]  loss: 3.7785  loss_CTS: 2.9015  loss_consist: 0.0877 Time/Image: 0.5488
+Epochs [6/80] Iter [360/90000]  loss: 3.3949  loss_CTS: 2.9747  loss_consist: 0.0420 Time/Image: 0.5477
+Epochs [7/80] Iter [380/90000]  loss: 3.8564  loss_CTS: 3.2569  loss_consist: 0.0599 Time/Image: 0.5491
+Epochs [7/80] Iter [400/90000]  loss: 3.8188  loss_CTS: 2.9025  loss_consist: 0.0916 Time/Image: 0.5493
+Epochs [7/80] Iter [420/90000]  loss: 3.5293  loss_CTS: 3.0388  loss_consist: 0.0491 Time/Image: 0.5489
+Epochs [8/80] Iter [440/90000]  loss: 5.2749  loss_CTS: 4.5545  loss_consist: 0.0720 Time/Image: 0.5490
+Epochs [8/80] Iter [460/90000]  loss: 2.9390  loss_CTS: 2.3862  loss_consist: 0.0553 Time/Image: 0.5502
+Epochs [8/80] Iter [480/90000]  loss: 3.7310  loss_CTS: 3.2050  loss_consist: 0.0526 Time/Image: 0.5497
+Epochs [9/80] Iter [500/90000]  loss: 3.7584  loss_CTS: 3.2967  loss_consist: 0.0462 Time/Image: 0.5513
+Epochs [9/80] Iter [520/90000]  loss: 3.4826  loss_CTS: 2.9553  loss_consist: 0.0527 Time/Image: 0.5504
+Epochs [9/80] Iter [540/90000]  loss: 3.8109  loss_CTS: 2.7969  loss_consist: 0.1014 Time/Image: 0.5505
+Epochs [10/80] Iter [560/90000]  loss: 3.6112  loss_CTS: 2.9996  loss_consist: 0.0612 Time/Image: 0.5508
+Epochs [10/80] Iter [580/90000]  loss: 4.1955  loss_CTS: 3.4468  loss_consist: 0.0749 Time/Image: 0.5507
+Epochs [10/80] Iter [600/90000]  loss: 3.2797  loss_CTS: 2.8140  loss_consist: 0.0466 Time/Image: 0.5486
+Epochs [11/80] Iter [620/90000]  loss: 2.8842  loss_CTS: 2.4918  loss_consist: 0.0392 Time/Image: 0.5472
+Epochs [11/80] Iter [640/90000]  loss: 5.3382  loss_CTS: 4.7137  loss_consist: 0.0624 Time/Image: 0.5487
+Epochs [11/80] Iter [660/90000]  loss: 2.8294  loss_CTS: 2.4603  loss_consist: 0.0369 Time/Image: 0.5488
+Epochs [12/80] Iter [680/90000]  loss: 3.8249  loss_CTS: 2.8386  loss_consist: 0.0986 Time/Image: 0.5490
+Epochs [12/80] Iter [700/90000]  loss: 3.7417  loss_CTS: 3.0786  loss_consist: 0.0663 Time/Image: 0.5490
+Epochs [12/80] Iter [720/90000]  loss: 3.6685  loss_CTS: 3.0537  loss_consist: 0.0615 Time/Image: 0.5514
+Epochs [13/80] Iter [740/90000]  loss: 3.3423  loss_CTS: 2.7811  loss_consist: 0.0561 Time/Image: 0.5518
+Epochs [13/80] Iter [760/90000]  loss: 3.1444  loss_CTS: 2.5247  loss_consist: 0.0620 Time/Image: 0.5514
+Epochs [13/80] Iter [780/90000]  loss: 3.8504  loss_CTS: 3.2918  loss_consist: 0.0559 Time/Image: 0.5488
+Epochs [14/80] Iter [800/90000]  loss: 3.3784  loss_CTS: 2.9711  loss_consist: 0.0407 Time/Image: 0.5483
+Epochs [14/80] Iter [820/90000]  loss: 4.0130  loss_CTS: 3.5131  loss_consist: 0.0500 Time/Image: 0.5484
+Epochs [14/80] Iter [840/90000]  loss: 4.1451  loss_CTS: 2.8217  loss_consist: 0.1323 Time/Image: 0.5507
+Epochs [15/80] Iter [860/90000]  loss: 4.5503  loss_CTS: 3.8559  loss_consist: 0.0694 Time/Image: 0.5498
+Epochs [15/80] Iter [880/90000]  loss: 3.3739  loss_CTS: 2.9967  loss_consist: 0.0377 Time/Image: 0.5482
+Epochs [15/80] Iter [900/90000]  loss: 2.8164  loss_CTS: 2.4718  loss_consist: 0.0345 Time/Image: 0.5490
+Epochs [16/80] Iter [920/90000]  loss: 3.5574  loss_CTS: 3.0567  loss_consist: 0.0501 Time/Image: 0.5487
+Epochs [16/80] Iter [940/90000]  loss: 3.0847  loss_CTS: 2.4529  loss_consist: 0.0632 Time/Image: 0.5488
+Epochs [16/80] Iter [960/90000]  loss: 3.3937  loss_CTS: 2.9733  loss_consist: 0.0420 Time/Image: 0.5503
+Epochs [17/80] Iter [980/90000]  loss: 3.3785  loss_CTS: 2.6030  loss_consist: 0.0776 Time/Image: 0.5489
+Epochs [17/80] Iter [1000/90000]  loss: 4.1481  loss_CTS: 3.7324  loss_consist: 0.0416 Time/Image: 0.5494
+  0%|          | 0/62 [00:00<?, ?it/s]  2%|▏         | 1/62 [00:01<01:06,  1.10s/it]  3%|▎         | 2/62 [00:03<01:37,  1.62s/it]  5%|▍         | 3/62 [00:03<01:14,  1.27s/it]  6%|▋         | 4/62 [00:04<01:03,  1.09s/it]  8%|▊         | 5/62 [00:05<00:56,  1.01it/s] 10%|▉         | 6/62 [00:06<00:57,  1.02s/it] 11%|█▏        | 7/62 [00:07<00:52,  1.06it/s] 13%|█▎        | 8/62 [00:08<00:59,  1.10s/it] 15%|█▍        | 9/62 [00:09<00:53,  1.00s/it] 16%|█▌        | 10/62 [00:11<01:04,  1.24s/it] 18%|█▊        | 11/62 [00:13<01:10,  1.38s/it] 19%|█▉        | 12/62 [00:13<01:00,  1.22s/it] 21%|██        | 13/62 [00:14<00:55,  1.13s/it] 23%|██▎       | 14/62 [00:15<00:49,  1.04s/it] 24%|██▍       | 15/62 [00:16<00:45,  1.03it/s] 26%|██▌       | 16/62 [00:17<00:42,  1.08it/s] 27%|██▋       | 17/62 [00:18<00:43,  1.05it/s] 29%|██▉       | 18/62 [00:19<00:40,  1.09it/s] 31%|███       | 19/62 [00:20<00:38,  1.13it/s] 32%|███▏      | 20/62 [00:20<00:36,  1.15it/s] 34%|███▍      | 21/62 [00:21<00:34,  1.18it/s] 35%|███▌      | 22/62 [00:22<00:33,  1.20it/s] 37%|███▋      | 23/62 [00:23<00:31,  1.22it/s] 39%|███▊      | 24/62 [00:24<00:31,  1.22it/s] 40%|████      | 25/62 [00:24<00:30,  1.21it/s] 42%|████▏     | 26/62 [00:25<00:29,  1.20it/s] 44%|████▎     | 27/62 [00:26<00:29,  1.21it/s] 45%|████▌     | 28/62 [00:27<00:28,  1.21it/s] 47%|████▋     | 29/62 [00:28<00:26,  1.23it/s] 48%|████▊     | 30/62 [00:29<00:26,  1.21it/s] 50%|█████     | 31/62 [00:29<00:25,  1.21it/s] 52%|█████▏    | 32/62 [00:30<00:24,  1.23it/s] 53%|█████▎    | 33/62 [00:31<00:23,  1.24it/s] 55%|█████▍    | 34/62 [00:32<00:22,  1.24it/s] 56%|█████▋    | 35/62 [00:33<00:21,  1.25it/s] 58%|█████▊    | 36/62 [00:33<00:21,  1.19it/s] 60%|█████▉    | 37/62 [00:34<00:21,  1.19it/s] 61%|██████▏   | 38/62 [00:35<00:20,  1.19it/s] 63%|██████▎   | 39/62 [00:36<00:19,  1.19it/s] 65%|██████▍   | 40/62 [00:37<00:18,  1.21it/s] 66%|██████▌   | 41/62 [00:38<00:17,  1.22it/s] 68%|██████▊   | 42/62 [00:38<00:16,  1.22it/s] 69%|██████▉   | 43/62 [00:39<00:15,  1.22it/s] 71%|███████   | 44/62 [00:40<00:14,  1.23it/s] 73%|███████▎  | 45/62 [00:41<00:13,  1.23it/s] 74%|███████▍  | 46/62 [00:42<00:12,  1.25it/s] 76%|███████▌  | 47/62 [00:42<00:12,  1.25it/s] 77%|███████▋  | 48/62 [00:43<00:11,  1.23it/s] 79%|███████▉  | 49/62 [00:44<00:10,  1.20it/s] 81%|████████  | 50/62 [00:45<00:10,  1.20it/s] 82%|████████▏ | 51/62 [00:46<00:09,  1.21it/s] 84%|████████▍ | 52/62 [00:47<00:08,  1.22it/s] 85%|████████▌ | 53/62 [00:47<00:07,  1.23it/s] 87%|████████▋ | 54/62 [00:48<00:06,  1.24it/s] 89%|████████▊ | 55/62 [00:49<00:05,  1.25it/s] 90%|█████████ | 56/62 [00:50<00:04,  1.25it/s] 92%|█████████▏| 57/62 [00:51<00:04,  1.20it/s] 94%|█████████▎| 58/62 [00:52<00:03,  1.19it/s] 95%|█████████▌| 59/62 [00:52<00:02,  1.21it/s] 97%|█████████▋| 60/62 [00:53<00:01,  1.21it/s] 98%|█████████▊| 61/62 [00:54<00:00,  1.22it/s]100%|██████████| 62/62 [00:55<00:00,  1.12it/s]100%|██████████| 62/62 [00:55<00:00,  1.12it/s]
+2022-10-08 17:09:01, INFO:ProDA:Overall Acc: 	: 0.6246831459684631
+2022-10-08 17:09:01, INFO:ProDA:Mean Acc : 	: 0.5741552566650547
+2022-10-08 17:09:01, INFO:ProDA:FreqW Acc : 	: 0.47373083195352805
+2022-10-08 17:09:01, INFO:ProDA:Mean IoU : 	: 0.39830224272542936
+2022-10-08 17:09:01, INFO:ProDA:0: 0.042302738187627
+2022-10-08 17:09:01, INFO:ProDA:1: 0.2800625009832017
+2022-10-08 17:09:01, INFO:ProDA:2: 0.3289475214957825
+2022-10-08 17:09:01, INFO:ProDA:3: 0.32647681556886393
+2022-10-08 17:09:01, INFO:ProDA:4: 0.5993902337634707
+2022-10-08 17:09:01, INFO:ProDA:5: 0.4435184281935769
+2022-10-08 17:09:01, INFO:ProDA:6: 0.5965058567112042
+2022-10-08 17:09:01, INFO:ProDA:7: 0.5692138468997082
+2022-10-08 17:09:02, INFO:ProDA:Best iou until now is 0.39830224272542936
+2022-10-08 17:10:07, INFO:ProDA:Epochs [17/80] Iter [1020/90000]  loss: 3.4790  loss_CTS: 2.8485  loss_consist: 0.0630 Time/Image: 0.5800
+2022-10-08 17:11:11, INFO:ProDA:Epochs [18/80] Iter [1040/90000]  loss: 2.3394  loss_CTS: 1.9225  loss_consist: 0.0417 Time/Image: 0.5502
+2022-10-08 17:12:14, INFO:ProDA:Epochs [18/80] Iter [1060/90000]  loss: 3.6038  loss_CTS: 3.1242  loss_consist: 0.0480 Time/Image: 0.5486
+2022-10-08 17:13:17, INFO:ProDA:Epochs [18/80] Iter [1080/90000]  loss: 4.5183  loss_CTS: 3.8368  loss_consist: 0.0682 Time/Image: 0.5501
+2022-10-08 17:14:20, INFO:ProDA:Epochs [19/80] Iter [1100/90000]  loss: 3.3647  loss_CTS: 2.9821  loss_consist: 0.0383 Time/Image: 0.5477
+2022-10-08 17:15:24, INFO:ProDA:Epochs [19/80] Iter [1120/90000]  loss: 2.2214  loss_CTS: 1.8773  loss_consist: 0.0344 Time/Image: 0.5486
+2022-10-08 17:16:27, INFO:ProDA:Epochs [19/80] Iter [1140/90000]  loss: 3.6800  loss_CTS: 2.4474  loss_consist: 0.1233 Time/Image: 0.5508
+2022-10-08 17:17:31, INFO:ProDA:Epochs [19/80] Iter [1160/90000]  loss: 3.0250  loss_CTS: 2.6378  loss_consist: 0.0387 Time/Image: 0.5516
+2022-10-08 17:18:36, INFO:ProDA:Epochs [20/80] Iter [1180/90000]  loss: 3.2578  loss_CTS: 2.7147  loss_consist: 0.0543 Time/Image: 0.5668
+2022-10-08 17:19:41, INFO:ProDA:Epochs [20/80] Iter [1200/90000]  loss: 3.6248  loss_CTS: 2.9654  loss_consist: 0.0659 Time/Image: 0.5516
+2022-10-08 17:20:44, INFO:ProDA:Epochs [20/80] Iter [1220/90000]  loss: 3.6365  loss_CTS: 2.8354  loss_consist: 0.0801 Time/Image: 0.5510
+2022-10-08 17:21:47, INFO:ProDA:Epochs [21/80] Iter [1240/90000]  loss: 4.3019  loss_CTS: 3.8729  loss_consist: 0.0429 Time/Image: 0.5506
+2022-10-08 17:22:51, INFO:ProDA:Epochs [21/80] Iter [1260/90000]  loss: 2.9806  loss_CTS: 2.3615  loss_consist: 0.0619 Time/Image: 0.5496
+2022-10-08 17:23:54, INFO:ProDA:Epochs [21/80] Iter [1280/90000]  loss: 3.8183  loss_CTS: 3.1076  loss_consist: 0.0711 Time/Image: 0.5496
+2022-10-08 17:24:57, INFO:ProDA:Epochs [22/80] Iter [1300/90000]  loss: 3.1118  loss_CTS: 2.7137  loss_consist: 0.0398 Time/Image: 0.5479
+2022-10-08 17:26:00, INFO:ProDA:Epochs [22/80] Iter [1320/90000]  loss: 3.1399  loss_CTS: 2.5986  loss_consist: 0.0541 Time/Image: 0.5497
+2022-10-08 17:27:04, INFO:ProDA:Epochs [22/80] Iter [1340/90000]  loss: 3.6338  loss_CTS: 2.9997  loss_consist: 0.0634 Time/Image: 0.5497
+2022-10-08 17:28:07, INFO:ProDA:Epochs [23/80] Iter [1360/90000]  loss: 3.9564  loss_CTS: 3.5435  loss_consist: 0.0413 Time/Image: 0.5485
+2022-10-08 17:29:11, INFO:ProDA:Epochs [23/80] Iter [1380/90000]  loss: 2.5101  loss_CTS: 2.2646  loss_consist: 0.0245 Time/Image: 0.5513
+2022-10-08 17:30:14, INFO:ProDA:Epochs [23/80] Iter [1400/90000]  loss: 3.5540  loss_CTS: 2.6614  loss_consist: 0.0893 Time/Image: 0.5494
+2022-10-08 17:31:17, INFO:ProDA:Epochs [24/80] Iter [1420/90000]  loss: 3.1486  loss_CTS: 2.8905  loss_consist: 0.0258 Time/Image: 0.5495
+2022-10-08 17:32:20, INFO:ProDA:Epochs [24/80] Iter [1440/90000]  loss: 2.2705  loss_CTS: 1.9529  loss_consist: 0.0318 Time/Image: 0.5499
+2022-10-08 17:33:24, INFO:ProDA:Epochs [24/80] Iter [1460/90000]  loss: 2.7755  loss_CTS: 2.4435  loss_consist: 0.0332 Time/Image: 0.5495
+2022-10-08 17:34:27, INFO:ProDA:Epochs [25/80] Iter [1480/90000]  loss: 1.8927  loss_CTS: 1.6609  loss_consist: 0.0232 Time/Image: 0.5485
+2022-10-08 17:35:31, INFO:ProDA:Epochs [25/80] Iter [1500/90000]  loss: 2.2487  loss_CTS: 1.9660  loss_consist: 0.0283 Time/Image: 0.5497
+2022-10-08 17:36:34, INFO:ProDA:Epochs [25/80] Iter [1520/90000]  loss: 2.0965  loss_CTS: 1.8712  loss_consist: 0.0225 Time/Image: 0.5504
+2022-10-08 17:37:37, INFO:ProDA:Epochs [26/80] Iter [1540/90000]  loss: 3.2511  loss_CTS: 2.5264  loss_consist: 0.0725 Time/Image: 0.5502
+2022-10-08 17:38:40, INFO:ProDA:Epochs [26/80] Iter [1560/90000]  loss: 3.3280  loss_CTS: 2.5689  loss_consist: 0.0759 Time/Image: 0.5497
+2022-10-08 17:39:44, INFO:ProDA:Epochs [26/80] Iter [1580/90000]  loss: 1.5901  loss_CTS: 1.4307  loss_consist: 0.0159 Time/Image: 0.5489
+2022-10-08 17:40:47, INFO:ProDA:Epochs [27/80] Iter [1600/90000]  loss: 3.4624  loss_CTS: 2.9719  loss_consist: 0.0491 Time/Image: 0.5485
+2022-10-08 17:41:50, INFO:ProDA:Epochs [27/80] Iter [1620/90000]  loss: 3.3085  loss_CTS: 2.8866  loss_consist: 0.0422 Time/Image: 0.5498
+2022-10-08 17:42:53, INFO:ProDA:Epochs [27/80] Iter [1640/90000]  loss: 3.2756  loss_CTS: 2.7373  loss_consist: 0.0538 Time/Image: 0.5507
+2022-10-08 17:43:57, INFO:ProDA:Epochs [28/80] Iter [1660/90000]  loss: 2.1937  loss_CTS: 1.7891  loss_consist: 0.0405 Time/Image: 0.5501
+2022-10-08 17:45:01, INFO:ProDA:Epochs [28/80] Iter [1680/90000]  loss: 2.5364  loss_CTS: 2.0886  loss_consist: 0.0448 Time/Image: 0.5489
+2022-10-08 17:46:04, INFO:ProDA:Epochs [28/80] Iter [1700/90000]  loss: 4.2141  loss_CTS: 3.5168  loss_consist: 0.0697 Time/Image: 0.5515
+2022-10-08 17:47:07, INFO:ProDA:Epochs [29/80] Iter [1720/90000]  loss: 3.4281  loss_CTS: 2.9894  loss_consist: 0.0439 Time/Image: 0.5493
+2022-10-08 17:48:11, INFO:ProDA:Epochs [29/80] Iter [1740/90000]  loss: 2.9811  loss_CTS: 2.4720  loss_consist: 0.0509 Time/Image: 0.5490
+2022-10-08 17:49:14, INFO:ProDA:Epochs [29/80] Iter [1760/90000]  loss: 3.9489  loss_CTS: 3.2039  loss_consist: 0.0745 Time/Image: 0.5487
+2022-10-08 17:50:18, INFO:ProDA:Epochs [30/80] Iter [1780/90000]  loss: 4.4656  loss_CTS: 3.7902  loss_consist: 0.0675 Time/Image: 0.5495
+2022-10-08 17:51:21, INFO:ProDA:Epochs [30/80] Iter [1800/90000]  loss: 3.2041  loss_CTS: 2.8282  loss_consist: 0.0376 Time/Image: 0.5494
+2022-10-08 17:52:24, INFO:ProDA:Epochs [30/80] Iter [1820/90000]  loss: 2.6060  loss_CTS: 2.3060  loss_consist: 0.0300 Time/Image: 0.5489
+2022-10-08 17:53:28, INFO:ProDA:Epochs [31/80] Iter [1840/90000]  loss: 2.4957  loss_CTS: 2.2106  loss_consist: 0.0285 Time/Image: 0.5481
+2022-10-08 17:54:31, INFO:ProDA:Epochs [31/80] Iter [1860/90000]  loss: 2.5013  loss_CTS: 2.0753  loss_consist: 0.0426 Time/Image: 0.5493
+2022-10-08 17:55:34, INFO:ProDA:Epochs [31/80] Iter [1880/90000]  loss: 2.7766  loss_CTS: 2.2286  loss_consist: 0.0548 Time/Image: 0.5505
+2022-10-08 17:56:37, INFO:ProDA:Epochs [32/80] Iter [1900/90000]  loss: 3.0296  loss_CTS: 2.3533  loss_consist: 0.0676 Time/Image: 0.5485
+2022-10-08 17:57:41, INFO:ProDA:Epochs [32/80] Iter [1920/90000]  loss: 3.6487  loss_CTS: 3.2708  loss_consist: 0.0378 Time/Image: 0.5519
+2022-10-08 17:58:44, INFO:ProDA:Epochs [32/80] Iter [1940/90000]  loss: 2.6589  loss_CTS: 2.2823  loss_consist: 0.0377 Time/Image: 0.5493
+2022-10-08 17:59:46, INFO:ProDA:Epochs [33/80] Iter [1960/90000]  loss: 2.3541  loss_CTS: 2.1081  loss_consist: 0.0246 Time/Image: 0.5482
+2022-10-08 18:00:50, INFO:ProDA:Epochs [33/80] Iter [1980/90000]  loss: 2.5983  loss_CTS: 2.2179  loss_consist: 0.0380 Time/Image: 0.5496
+2022-10-08 18:01:53, INFO:ProDA:Epochs [33/80] Iter [2000/90000]  loss: 2.5969  loss_CTS: 2.3410  loss_consist: 0.0256 Time/Image: 0.5494
+2022-10-08 18:01:54, INFO:ProDA:learning rate is 9.799976395392559e-05 for ResNet101 net
+2022-10-08 18:01:54, INFO:ProDA:Successfully set the model eval mode
+Overall Acc: 	 0.6246831459684631
+Mean Acc : 	 0.5741552566650547
+FreqW Acc : 	 0.47373083195352805
+Mean IoU : 	 0.39830224272542936
+Epochs [17/80] Iter [1020/90000]  loss: 3.4790  loss_CTS: 2.8485  loss_consist: 0.0630 Time/Image: 0.5800
+Epochs [18/80] Iter [1040/90000]  loss: 2.3394  loss_CTS: 1.9225  loss_consist: 0.0417 Time/Image: 0.5502
+Epochs [18/80] Iter [1060/90000]  loss: 3.6038  loss_CTS: 3.1242  loss_consist: 0.0480 Time/Image: 0.5486
+Epochs [18/80] Iter [1080/90000]  loss: 4.5183  loss_CTS: 3.8368  loss_consist: 0.0682 Time/Image: 0.5501
+Epochs [19/80] Iter [1100/90000]  loss: 3.3647  loss_CTS: 2.9821  loss_consist: 0.0383 Time/Image: 0.5477
+Epochs [19/80] Iter [1120/90000]  loss: 2.2214  loss_CTS: 1.8773  loss_consist: 0.0344 Time/Image: 0.5486
+Epochs [19/80] Iter [1140/90000]  loss: 3.6800  loss_CTS: 2.4474  loss_consist: 0.1233 Time/Image: 0.5508
+Epochs [19/80] Iter [1160/90000]  loss: 3.0250  loss_CTS: 2.6378  loss_consist: 0.0387 Time/Image: 0.5516
+Epochs [20/80] Iter [1180/90000]  loss: 3.2578  loss_CTS: 2.7147  loss_consist: 0.0543 Time/Image: 0.5668
+Epochs [20/80] Iter [1200/90000]  loss: 3.6248  loss_CTS: 2.9654  loss_consist: 0.0659 Time/Image: 0.5516
+Epochs [20/80] Iter [1220/90000]  loss: 3.6365  loss_CTS: 2.8354  loss_consist: 0.0801 Time/Image: 0.5510
+Epochs [21/80] Iter [1240/90000]  loss: 4.3019  loss_CTS: 3.8729  loss_consist: 0.0429 Time/Image: 0.5506
+Epochs [21/80] Iter [1260/90000]  loss: 2.9806  loss_CTS: 2.3615  loss_consist: 0.0619 Time/Image: 0.5496
+Epochs [21/80] Iter [1280/90000]  loss: 3.8183  loss_CTS: 3.1076  loss_consist: 0.0711 Time/Image: 0.5496
+Epochs [22/80] Iter [1300/90000]  loss: 3.1118  loss_CTS: 2.7137  loss_consist: 0.0398 Time/Image: 0.5479
+Epochs [22/80] Iter [1320/90000]  loss: 3.1399  loss_CTS: 2.5986  loss_consist: 0.0541 Time/Image: 0.5497
+Epochs [22/80] Iter [1340/90000]  loss: 3.6338  loss_CTS: 2.9997  loss_consist: 0.0634 Time/Image: 0.5497
+Epochs [23/80] Iter [1360/90000]  loss: 3.9564  loss_CTS: 3.5435  loss_consist: 0.0413 Time/Image: 0.5485
+Epochs [23/80] Iter [1380/90000]  loss: 2.5101  loss_CTS: 2.2646  loss_consist: 0.0245 Time/Image: 0.5513
+Epochs [23/80] Iter [1400/90000]  loss: 3.5540  loss_CTS: 2.6614  loss_consist: 0.0893 Time/Image: 0.5494
+Epochs [24/80] Iter [1420/90000]  loss: 3.1486  loss_CTS: 2.8905  loss_consist: 0.0258 Time/Image: 0.5495
+Epochs [24/80] Iter [1440/90000]  loss: 2.2705  loss_CTS: 1.9529  loss_consist: 0.0318 Time/Image: 0.5499
+Epochs [24/80] Iter [1460/90000]  loss: 2.7755  loss_CTS: 2.4435  loss_consist: 0.0332 Time/Image: 0.5495
+Epochs [25/80] Iter [1480/90000]  loss: 1.8927  loss_CTS: 1.6609  loss_consist: 0.0232 Time/Image: 0.5485
+Epochs [25/80] Iter [1500/90000]  loss: 2.2487  loss_CTS: 1.9660  loss_consist: 0.0283 Time/Image: 0.5497
+Epochs [25/80] Iter [1520/90000]  loss: 2.0965  loss_CTS: 1.8712  loss_consist: 0.0225 Time/Image: 0.5504
+Epochs [26/80] Iter [1540/90000]  loss: 3.2511  loss_CTS: 2.5264  loss_consist: 0.0725 Time/Image: 0.5502
+Epochs [26/80] Iter [1560/90000]  loss: 3.3280  loss_CTS: 2.5689  loss_consist: 0.0759 Time/Image: 0.5497
+Epochs [26/80] Iter [1580/90000]  loss: 1.5901  loss_CTS: 1.4307  loss_consist: 0.0159 Time/Image: 0.5489
+Epochs [27/80] Iter [1600/90000]  loss: 3.4624  loss_CTS: 2.9719  loss_consist: 0.0491 Time/Image: 0.5485
+Epochs [27/80] Iter [1620/90000]  loss: 3.3085  loss_CTS: 2.8866  loss_consist: 0.0422 Time/Image: 0.5498
+Epochs [27/80] Iter [1640/90000]  loss: 3.2756  loss_CTS: 2.7373  loss_consist: 0.0538 Time/Image: 0.5507
+Epochs [28/80] Iter [1660/90000]  loss: 2.1937  loss_CTS: 1.7891  loss_consist: 0.0405 Time/Image: 0.5501
+Epochs [28/80] Iter [1680/90000]  loss: 2.5364  loss_CTS: 2.0886  loss_consist: 0.0448 Time/Image: 0.5489
+Epochs [28/80] Iter [1700/90000]  loss: 4.2141  loss_CTS: 3.5168  loss_consist: 0.0697 Time/Image: 0.5515
+Epochs [29/80] Iter [1720/90000]  loss: 3.4281  loss_CTS: 2.9894  loss_consist: 0.0439 Time/Image: 0.5493
+Epochs [29/80] Iter [1740/90000]  loss: 2.9811  loss_CTS: 2.4720  loss_consist: 0.0509 Time/Image: 0.5490
+Epochs [29/80] Iter [1760/90000]  loss: 3.9489  loss_CTS: 3.2039  loss_consist: 0.0745 Time/Image: 0.5487
+Epochs [30/80] Iter [1780/90000]  loss: 4.4656  loss_CTS: 3.7902  loss_consist: 0.0675 Time/Image: 0.5495
+Epochs [30/80] Iter [1800/90000]  loss: 3.2041  loss_CTS: 2.8282  loss_consist: 0.0376 Time/Image: 0.5494
+Epochs [30/80] Iter [1820/90000]  loss: 2.6060  loss_CTS: 2.3060  loss_consist: 0.0300 Time/Image: 0.5489
+Epochs [31/80] Iter [1840/90000]  loss: 2.4957  loss_CTS: 2.2106  loss_consist: 0.0285 Time/Image: 0.5481
+Epochs [31/80] Iter [1860/90000]  loss: 2.5013  loss_CTS: 2.0753  loss_consist: 0.0426 Time/Image: 0.5493
+Epochs [31/80] Iter [1880/90000]  loss: 2.7766  loss_CTS: 2.2286  loss_consist: 0.0548 Time/Image: 0.5505
+Epochs [32/80] Iter [1900/90000]  loss: 3.0296  loss_CTS: 2.3533  loss_consist: 0.0676 Time/Image: 0.5485
+Epochs [32/80] Iter [1920/90000]  loss: 3.6487  loss_CTS: 3.2708  loss_consist: 0.0378 Time/Image: 0.5519
+Epochs [32/80] Iter [1940/90000]  loss: 2.6589  loss_CTS: 2.2823  loss_consist: 0.0377 Time/Image: 0.5493
+Epochs [33/80] Iter [1960/90000]  loss: 2.3541  loss_CTS: 2.1081  loss_consist: 0.0246 Time/Image: 0.5482
+Epochs [33/80] Iter [1980/90000]  loss: 2.5983  loss_CTS: 2.2179  loss_consist: 0.0380 Time/Image: 0.5496
+Epochs [33/80] Iter [2000/90000]  loss: 2.5969  loss_CTS: 2.3410  loss_consist: 0.0256 Time/Image: 0.5494
+  0%|          | 0/62 [00:00<?, ?it/s]  2%|▏         | 1/62 [00:00<00:59,  1.02it/s]  3%|▎         | 2/62 [00:01<00:53,  1.13it/s]  5%|▍         | 3/62 [00:02<00:49,  1.18it/s]  6%|▋         | 4/62 [00:03<00:47,  1.21it/s]  8%|▊         | 5/62 [00:04<00:46,  1.23it/s] 10%|▉         | 6/62 [00:04<00:45,  1.23it/s] 11%|█▏        | 7/62 [00:05<00:44,  1.23it/s] 13%|█▎        | 8/62 [00:06<00:44,  1.22it/s] 15%|█▍        | 9/62 [00:07<00:42,  1.24it/s] 16%|█▌        | 10/62 [00:08<00:41,  1.24it/s] 18%|█▊        | 11/62 [00:09<00:41,  1.23it/s] 19%|█▉        | 12/62 [00:09<00:40,  1.22it/s] 21%|██        | 13/62 [00:10<00:39,  1.23it/s] 23%|██▎       | 14/62 [00:11<00:38,  1.23it/s] 24%|██▍       | 15/62 [00:12<00:37,  1.24it/s] 26%|██▌       | 16/62 [00:13<00:36,  1.25it/s] 27%|██▋       | 17/62 [00:13<00:36,  1.24it/s] 29%|██▉       | 18/62 [00:14<00:35,  1.23it/s] 31%|███       | 19/62 [00:15<00:34,  1.23it/s] 32%|███▏      | 20/62 [00:16<00:34,  1.22it/s] 34%|███▍      | 21/62 [00:17<00:33,  1.22it/s] 35%|███▌      | 22/62 [00:18<00:32,  1.22it/s] 37%|███▋      | 23/62 [00:18<00:31,  1.23it/s] 39%|███▊      | 24/62 [00:19<00:30,  1.24it/s] 40%|████      | 25/62 [00:20<00:29,  1.25it/s] 42%|████▏     | 26/62 [00:21<00:29,  1.23it/s] 44%|████▎     | 27/62 [00:22<00:28,  1.22it/s] 45%|████▌     | 28/62 [00:22<00:27,  1.23it/s] 47%|████▋     | 29/62 [00:23<00:27,  1.21it/s] 48%|████▊     | 30/62 [00:24<00:26,  1.21it/s] 50%|█████     | 31/62 [00:25<00:25,  1.21it/s] 52%|█████▏    | 32/62 [00:26<00:24,  1.22it/s] 53%|█████▎    | 33/62 [00:26<00:23,  1.23it/s] 55%|█████▍    | 34/62 [00:27<00:22,  1.24it/s] 56%|█████▋    | 35/62 [00:28<00:21,  1.24it/s] 58%|█████▊    | 36/62 [00:29<00:21,  1.22it/s] 60%|█████▉    | 37/62 [00:30<00:20,  1.22it/s] 61%|██████▏   | 38/62 [00:31<00:19,  1.23it/s] 63%|██████▎   | 39/62 [00:31<00:18,  1.24it/s] 65%|██████▍   | 40/62 [00:32<00:17,  1.23it/s] 66%|██████▌   | 41/62 [00:33<00:17,  1.22it/s] 68%|██████▊   | 42/62 [00:34<00:16,  1.22it/s] 69%|██████▉   | 43/62 [00:35<00:15,  1.23it/s] 71%|███████   | 44/62 [00:35<00:14,  1.23it/s] 73%|███████▎  | 45/62 [00:36<00:13,  1.23it/s] 74%|███████▍  | 46/62 [00:37<00:12,  1.24it/s] 76%|███████▌  | 47/62 [00:38<00:12,  1.24it/s] 77%|███████▋  | 48/62 [00:39<00:11,  1.24it/s] 79%|███████▉  | 49/62 [00:39<00:10,  1.25it/s] 81%|████████  | 50/62 [00:40<00:09,  1.25it/s] 82%|████████▏ | 51/62 [00:41<00:08,  1.23it/s] 84%|████████▍ | 52/62 [00:42<00:08,  1.23it/s] 85%|████████▌ | 53/62 [00:43<00:07,  1.23it/s] 87%|████████▋ | 54/62 [00:44<00:06,  1.23it/s] 89%|████████▊ | 55/62 [00:44<00:05,  1.23it/s] 90%|█████████ | 56/62 [00:45<00:04,  1.24it/s] 92%|█████████▏| 57/62 [00:46<00:04,  1.24it/s] 94%|█████████▎| 58/62 [00:47<00:03,  1.24it/s] 95%|█████████▌| 59/62 [00:48<00:02,  1.24it/s] 97%|█████████▋| 60/62 [00:48<00:01,  1.25it/s] 98%|█████████▊| 61/62 [00:49<00:00,  1.26it/s]100%|██████████| 62/62 [00:50<00:00,  1.33it/s]100%|██████████| 62/62 [00:50<00:00,  1.23it/s]
+2022-10-08 18:02:45, INFO:ProDA:Overall Acc: 	: 0.644364790524525
+2022-10-08 18:02:45, INFO:ProDA:Mean Acc : 	: 0.5824292703009414
+2022-10-08 18:02:45, INFO:ProDA:FreqW Acc : 	: 0.4933576830094124
+2022-10-08 18:02:45, INFO:ProDA:Mean IoU : 	: 0.4232785666011576
+2022-10-08 18:02:45, INFO:ProDA:0: 0.04334476594648686
+2022-10-08 18:02:45, INFO:ProDA:1: 0.313174940318464
+2022-10-08 18:02:45, INFO:ProDA:2: 0.3311143719878383
+2022-10-08 18:02:45, INFO:ProDA:3: 0.34829898849127106
+2022-10-08 18:02:45, INFO:ProDA:4: 0.6097582624104745
+2022-10-08 18:02:45, INFO:ProDA:5: 0.537325545704289
+2022-10-08 18:02:45, INFO:ProDA:6: 0.6145207810808995
+2022-10-08 18:02:45, INFO:ProDA:7: 0.5886908768695379
+2022-10-08 18:02:47, INFO:ProDA:Best iou until now is 0.4232785666011576
+2022-10-08 18:03:52, INFO:ProDA:Epochs [34/80] Iter [2020/90000]  loss: 2.6649  loss_CTS: 2.2834  loss_consist: 0.0381 Time/Image: 0.5801
+2022-10-08 18:04:55, INFO:ProDA:Epochs [34/80] Iter [2040/90000]  loss: 3.0804  loss_CTS: 2.8094  loss_consist: 0.0271 Time/Image: 0.5496
+2022-10-08 18:05:58, INFO:ProDA:Epochs [34/80] Iter [2060/90000]  loss: 2.2079  loss_CTS: 1.9536  loss_consist: 0.0254 Time/Image: 0.5496
+2022-10-08 18:07:01, INFO:ProDA:Epochs [35/80] Iter [2080/90000]  loss: 3.7557  loss_CTS: 2.8646  loss_consist: 0.0891 Time/Image: 0.5511
+2022-10-08 18:08:04, INFO:ProDA:Epochs [35/80] Iter [2100/90000]  loss: 2.3965  loss_CTS: 2.0349  loss_consist: 0.0362 Time/Image: 0.5489
+2022-10-08 18:09:07, INFO:ProDA:Epochs [35/80] Iter [2120/90000]  loss: 2.7851  loss_CTS: 2.4201  loss_consist: 0.0365 Time/Image: 0.5506
+2022-10-08 18:10:11, INFO:ProDA:Epochs [36/80] Iter [2140/90000]  loss: 3.1538  loss_CTS: 2.6929  loss_consist: 0.0461 Time/Image: 0.5480
+2022-10-08 18:11:14, INFO:ProDA:Epochs [36/80] Iter [2160/90000]  loss: 2.6939  loss_CTS: 2.3570  loss_consist: 0.0337 Time/Image: 0.5507
+2022-10-08 18:12:17, INFO:ProDA:Epochs [36/80] Iter [2180/90000]  loss: 2.2239  loss_CTS: 1.8546  loss_consist: 0.0369 Time/Image: 0.5531
+2022-10-08 18:13:33, INFO:ProDA:Epochs [37/80] Iter [2200/90000]  loss: 2.6139  loss_CTS: 2.3042  loss_consist: 0.0310 Time/Image: 0.6091
+2022-10-08 18:14:37, INFO:ProDA:Epochs [37/80] Iter [2220/90000]  loss: 4.1921  loss_CTS: 3.4979  loss_consist: 0.0694 Time/Image: 0.5495
+2022-10-08 18:15:40, INFO:ProDA:Epochs [37/80] Iter [2240/90000]  loss: 3.3043  loss_CTS: 2.6098  loss_consist: 0.0694 Time/Image: 0.5506
+2022-10-08 18:16:44, INFO:ProDA:Epochs [38/80] Iter [2260/90000]  loss: 3.4002  loss_CTS: 2.9513  loss_consist: 0.0449 Time/Image: 0.5503
+2022-10-08 18:17:47, INFO:ProDA:Epochs [38/80] Iter [2280/90000]  loss: 2.8412  loss_CTS: 2.4816  loss_consist: 0.0360 Time/Image: 0.5513
+2022-10-08 18:18:50, INFO:ProDA:Epochs [38/80] Iter [2300/90000]  loss: 2.5025  loss_CTS: 2.0312  loss_consist: 0.0471 Time/Image: 0.5498
+2022-10-08 18:19:54, INFO:ProDA:Epochs [39/80] Iter [2320/90000]  loss: 3.1981  loss_CTS: 2.3440  loss_consist: 0.0854 Time/Image: 0.5510
+2022-10-08 18:20:57, INFO:ProDA:Epochs [39/80] Iter [2340/90000]  loss: 2.5335  loss_CTS: 2.2054  loss_consist: 0.0328 Time/Image: 0.5483
+2022-10-08 18:22:00, INFO:ProDA:Epochs [39/80] Iter [2360/90000]  loss: 3.0265  loss_CTS: 2.3884  loss_consist: 0.0638 Time/Image: 0.5486
+2022-10-08 18:23:04, INFO:ProDA:Epochs [39/80] Iter [2380/90000]  loss: 3.3344  loss_CTS: 2.7687  loss_consist: 0.0566 Time/Image: 0.5510
+2022-10-08 18:24:07, INFO:ProDA:Epochs [40/80] Iter [2400/90000]  loss: 2.8341  loss_CTS: 2.5384  loss_consist: 0.0296 Time/Image: 0.5493
+2022-10-08 18:25:10, INFO:ProDA:Epochs [40/80] Iter [2420/90000]  loss: 2.2270  loss_CTS: 1.9518  loss_consist: 0.0275 Time/Image: 0.5513
+2022-10-08 18:26:14, INFO:ProDA:Epochs [40/80] Iter [2440/90000]  loss: 3.4681  loss_CTS: 2.8541  loss_consist: 0.0614 Time/Image: 0.5518
+2022-10-08 18:27:17, INFO:ProDA:Epochs [41/80] Iter [2460/90000]  loss: 3.3171  loss_CTS: 2.7819  loss_consist: 0.0535 Time/Image: 0.5505
+2022-10-08 18:28:20, INFO:ProDA:Epochs [41/80] Iter [2480/90000]  loss: 2.1579  loss_CTS: 1.9356  loss_consist: 0.0222 Time/Image: 0.5482
+2022-10-08 18:29:24, INFO:ProDA:Epochs [41/80] Iter [2500/90000]  loss: 2.1656  loss_CTS: 1.8234  loss_consist: 0.0342 Time/Image: 0.5500
+2022-10-08 18:30:27, INFO:ProDA:Epochs [42/80] Iter [2520/90000]  loss: 2.2943  loss_CTS: 2.0068  loss_consist: 0.0287 Time/Image: 0.5489
+2022-10-08 18:31:30, INFO:ProDA:Epochs [42/80] Iter [2540/90000]  loss: 2.2639  loss_CTS: 1.8759  loss_consist: 0.0388 Time/Image: 0.5497
+2022-10-08 18:32:34, INFO:ProDA:Epochs [42/80] Iter [2560/90000]  loss: 2.2620  loss_CTS: 1.5555  loss_consist: 0.0707 Time/Image: 0.5500
+2022-10-08 18:33:37, INFO:ProDA:Epochs [43/80] Iter [2580/90000]  loss: 2.2745  loss_CTS: 1.9314  loss_consist: 0.0343 Time/Image: 0.5489
+2022-10-08 18:34:41, INFO:ProDA:Epochs [43/80] Iter [2600/90000]  loss: 2.8262  loss_CTS: 2.3561  loss_consist: 0.0470 Time/Image: 0.5495
+2022-10-08 18:35:44, INFO:ProDA:Epochs [43/80] Iter [2620/90000]  loss: 2.3970  loss_CTS: 1.9391  loss_consist: 0.0458 Time/Image: 0.5477
+2022-10-08 18:36:48, INFO:ProDA:Epochs [44/80] Iter [2640/90000]  loss: 3.5165  loss_CTS: 2.6232  loss_consist: 0.0893 Time/Image: 0.5496
+2022-10-08 18:37:51, INFO:ProDA:Epochs [44/80] Iter [2660/90000]  loss: 2.5616  loss_CTS: 2.2613  loss_consist: 0.0300 Time/Image: 0.5488
+2022-10-08 18:38:54, INFO:ProDA:Epochs [44/80] Iter [2680/90000]  loss: 2.2179  loss_CTS: 1.7650  loss_consist: 0.0453 Time/Image: 0.5487
+2022-10-08 18:39:57, INFO:ProDA:Epochs [45/80] Iter [2700/90000]  loss: 2.6829  loss_CTS: 2.3683  loss_consist: 0.0315 Time/Image: 0.5514
+2022-10-08 18:41:00, INFO:ProDA:Epochs [45/80] Iter [2720/90000]  loss: 3.1133  loss_CTS: 2.5907  loss_consist: 0.0523 Time/Image: 0.5498
+2022-10-08 18:42:04, INFO:ProDA:Epochs [45/80] Iter [2740/90000]  loss: 2.9984  loss_CTS: 2.5988  loss_consist: 0.0400 Time/Image: 0.5492
+2022-10-08 18:43:07, INFO:ProDA:Epochs [46/80] Iter [2760/90000]  loss: 2.5355  loss_CTS: 2.3326  loss_consist: 0.0203 Time/Image: 0.5507
+2022-10-08 18:44:10, INFO:ProDA:Epochs [46/80] Iter [2780/90000]  loss: 2.4189  loss_CTS: 1.6567  loss_consist: 0.0762 Time/Image: 0.5474
+2022-10-08 18:45:14, INFO:ProDA:Epochs [46/80] Iter [2800/90000]  loss: 3.1572  loss_CTS: 2.5981  loss_consist: 0.0559 Time/Image: 0.5491
+2022-10-08 18:46:17, INFO:ProDA:Epochs [47/80] Iter [2820/90000]  loss: 1.8607  loss_CTS: 1.6794  loss_consist: 0.0181 Time/Image: 0.5510
+2022-10-08 18:47:20, INFO:ProDA:Epochs [47/80] Iter [2840/90000]  loss: 2.3142  loss_CTS: 2.0591  loss_consist: 0.0255 Time/Image: 0.5498
+2022-10-08 18:48:23, INFO:ProDA:Epochs [47/80] Iter [2860/90000]  loss: 3.5791  loss_CTS: 3.0865  loss_consist: 0.0493 Time/Image: 0.5513
+2022-10-08 18:49:27, INFO:ProDA:Epochs [48/80] Iter [2880/90000]  loss: 2.4743  loss_CTS: 2.1927  loss_consist: 0.0282 Time/Image: 0.5507
+2022-10-08 18:50:30, INFO:ProDA:Epochs [48/80] Iter [2900/90000]  loss: 3.1249  loss_CTS: 2.7167  loss_consist: 0.0408 Time/Image: 0.5503
+2022-10-08 18:51:33, INFO:ProDA:Epochs [48/80] Iter [2920/90000]  loss: 2.6757  loss_CTS: 2.3164  loss_consist: 0.0359 Time/Image: 0.5508
+2022-10-08 18:52:37, INFO:ProDA:Epochs [49/80] Iter [2940/90000]  loss: 3.9894  loss_CTS: 3.1743  loss_consist: 0.0815 Time/Image: 0.5504
+2022-10-08 18:53:41, INFO:ProDA:Epochs [49/80] Iter [2960/90000]  loss: 2.5290  loss_CTS: 2.1929  loss_consist: 0.0336 Time/Image: 0.5542
+2022-10-08 18:54:44, INFO:ProDA:Epochs [49/80] Iter [2980/90000]  loss: 2.5024  loss_CTS: 1.9427  loss_consist: 0.0560 Time/Image: 0.5500
+2022-10-08 18:55:47, INFO:ProDA:Epochs [50/80] Iter [3000/90000]  loss: 2.7885  loss_CTS: 2.2410  loss_consist: 0.0548 Time/Image: 0.5482
+2022-10-08 18:55:47, INFO:ProDA:learning rate is 9.699694458633647e-05 for ResNet101 net
+2022-10-08 18:55:47, INFO:ProDA:Successfully set the model eval mode
+Overall Acc: 	 0.644364790524525
+Mean Acc : 	 0.5824292703009414
+FreqW Acc : 	 0.4933576830094124
+Mean IoU : 	 0.4232785666011576
+Epochs [34/80] Iter [2020/90000]  loss: 2.6649  loss_CTS: 2.2834  loss_consist: 0.0381 Time/Image: 0.5801
+Epochs [34/80] Iter [2040/90000]  loss: 3.0804  loss_CTS: 2.8094  loss_consist: 0.0271 Time/Image: 0.5496
+Epochs [34/80] Iter [2060/90000]  loss: 2.2079  loss_CTS: 1.9536  loss_consist: 0.0254 Time/Image: 0.5496
+Epochs [35/80] Iter [2080/90000]  loss: 3.7557  loss_CTS: 2.8646  loss_consist: 0.0891 Time/Image: 0.5511
+Epochs [35/80] Iter [2100/90000]  loss: 2.3965  loss_CTS: 2.0349  loss_consist: 0.0362 Time/Image: 0.5489
+Epochs [35/80] Iter [2120/90000]  loss: 2.7851  loss_CTS: 2.4201  loss_consist: 0.0365 Time/Image: 0.5506
+Epochs [36/80] Iter [2140/90000]  loss: 3.1538  loss_CTS: 2.6929  loss_consist: 0.0461 Time/Image: 0.5480
+Epochs [36/80] Iter [2160/90000]  loss: 2.6939  loss_CTS: 2.3570  loss_consist: 0.0337 Time/Image: 0.5507
+Epochs [36/80] Iter [2180/90000]  loss: 2.2239  loss_CTS: 1.8546  loss_consist: 0.0369 Time/Image: 0.5531
+Epochs [37/80] Iter [2200/90000]  loss: 2.6139  loss_CTS: 2.3042  loss_consist: 0.0310 Time/Image: 0.6091
+Epochs [37/80] Iter [2220/90000]  loss: 4.1921  loss_CTS: 3.4979  loss_consist: 0.0694 Time/Image: 0.5495
+Epochs [37/80] Iter [2240/90000]  loss: 3.3043  loss_CTS: 2.6098  loss_consist: 0.0694 Time/Image: 0.5506
+Epochs [38/80] Iter [2260/90000]  loss: 3.4002  loss_CTS: 2.9513  loss_consist: 0.0449 Time/Image: 0.5503
+Epochs [38/80] Iter [2280/90000]  loss: 2.8412  loss_CTS: 2.4816  loss_consist: 0.0360 Time/Image: 0.5513
+Epochs [38/80] Iter [2300/90000]  loss: 2.5025  loss_CTS: 2.0312  loss_consist: 0.0471 Time/Image: 0.5498
+Epochs [39/80] Iter [2320/90000]  loss: 3.1981  loss_CTS: 2.3440  loss_consist: 0.0854 Time/Image: 0.5510
+Epochs [39/80] Iter [2340/90000]  loss: 2.5335  loss_CTS: 2.2054  loss_consist: 0.0328 Time/Image: 0.5483
+Epochs [39/80] Iter [2360/90000]  loss: 3.0265  loss_CTS: 2.3884  loss_consist: 0.0638 Time/Image: 0.5486
+Epochs [39/80] Iter [2380/90000]  loss: 3.3344  loss_CTS: 2.7687  loss_consist: 0.0566 Time/Image: 0.5510
+Epochs [40/80] Iter [2400/90000]  loss: 2.8341  loss_CTS: 2.5384  loss_consist: 0.0296 Time/Image: 0.5493
+Epochs [40/80] Iter [2420/90000]  loss: 2.2270  loss_CTS: 1.9518  loss_consist: 0.0275 Time/Image: 0.5513
+Epochs [40/80] Iter [2440/90000]  loss: 3.4681  loss_CTS: 2.8541  loss_consist: 0.0614 Time/Image: 0.5518
+Epochs [41/80] Iter [2460/90000]  loss: 3.3171  loss_CTS: 2.7819  loss_consist: 0.0535 Time/Image: 0.5505
+Epochs [41/80] Iter [2480/90000]  loss: 2.1579  loss_CTS: 1.9356  loss_consist: 0.0222 Time/Image: 0.5482
+Epochs [41/80] Iter [2500/90000]  loss: 2.1656  loss_CTS: 1.8234  loss_consist: 0.0342 Time/Image: 0.5500
+Epochs [42/80] Iter [2520/90000]  loss: 2.2943  loss_CTS: 2.0068  loss_consist: 0.0287 Time/Image: 0.5489
+Epochs [42/80] Iter [2540/90000]  loss: 2.2639  loss_CTS: 1.8759  loss_consist: 0.0388 Time/Image: 0.5497
+Epochs [42/80] Iter [2560/90000]  loss: 2.2620  loss_CTS: 1.5555  loss_consist: 0.0707 Time/Image: 0.5500
+Epochs [43/80] Iter [2580/90000]  loss: 2.2745  loss_CTS: 1.9314  loss_consist: 0.0343 Time/Image: 0.5489
+Epochs [43/80] Iter [2600/90000]  loss: 2.8262  loss_CTS: 2.3561  loss_consist: 0.0470 Time/Image: 0.5495
+Epochs [43/80] Iter [2620/90000]  loss: 2.3970  loss_CTS: 1.9391  loss_consist: 0.0458 Time/Image: 0.5477
+Epochs [44/80] Iter [2640/90000]  loss: 3.5165  loss_CTS: 2.6232  loss_consist: 0.0893 Time/Image: 0.5496
+Epochs [44/80] Iter [2660/90000]  loss: 2.5616  loss_CTS: 2.2613  loss_consist: 0.0300 Time/Image: 0.5488
+Epochs [44/80] Iter [2680/90000]  loss: 2.2179  loss_CTS: 1.7650  loss_consist: 0.0453 Time/Image: 0.5487
+Epochs [45/80] Iter [2700/90000]  loss: 2.6829  loss_CTS: 2.3683  loss_consist: 0.0315 Time/Image: 0.5514
+Epochs [45/80] Iter [2720/90000]  loss: 3.1133  loss_CTS: 2.5907  loss_consist: 0.0523 Time/Image: 0.5498
+Epochs [45/80] Iter [2740/90000]  loss: 2.9984  loss_CTS: 2.5988  loss_consist: 0.0400 Time/Image: 0.5492
+Epochs [46/80] Iter [2760/90000]  loss: 2.5355  loss_CTS: 2.3326  loss_consist: 0.0203 Time/Image: 0.5507
+Epochs [46/80] Iter [2780/90000]  loss: 2.4189  loss_CTS: 1.6567  loss_consist: 0.0762 Time/Image: 0.5474
+Epochs [46/80] Iter [2800/90000]  loss: 3.1572  loss_CTS: 2.5981  loss_consist: 0.0559 Time/Image: 0.5491
+Epochs [47/80] Iter [2820/90000]  loss: 1.8607  loss_CTS: 1.6794  loss_consist: 0.0181 Time/Image: 0.5510
+Epochs [47/80] Iter [2840/90000]  loss: 2.3142  loss_CTS: 2.0591  loss_consist: 0.0255 Time/Image: 0.5498
+Epochs [47/80] Iter [2860/90000]  loss: 3.5791  loss_CTS: 3.0865  loss_consist: 0.0493 Time/Image: 0.5513
+Epochs [48/80] Iter [2880/90000]  loss: 2.4743  loss_CTS: 2.1927  loss_consist: 0.0282 Time/Image: 0.5507
+Epochs [48/80] Iter [2900/90000]  loss: 3.1249  loss_CTS: 2.7167  loss_consist: 0.0408 Time/Image: 0.5503
+Epochs [48/80] Iter [2920/90000]  loss: 2.6757  loss_CTS: 2.3164  loss_consist: 0.0359 Time/Image: 0.5508
+Epochs [49/80] Iter [2940/90000]  loss: 3.9894  loss_CTS: 3.1743  loss_consist: 0.0815 Time/Image: 0.5504
+Epochs [49/80] Iter [2960/90000]  loss: 2.5290  loss_CTS: 2.1929  loss_consist: 0.0336 Time/Image: 0.5542
+Epochs [49/80] Iter [2980/90000]  loss: 2.5024  loss_CTS: 1.9427  loss_consist: 0.0560 Time/Image: 0.5500
+Epochs [50/80] Iter [3000/90000]  loss: 2.7885  loss_CTS: 2.2410  loss_consist: 0.0548 Time/Image: 0.5482
+  0%|          | 0/62 [00:00<?, ?it/s]  2%|▏         | 1/62 [00:01<01:09,  1.13s/it]  3%|▎         | 2/62 [00:02<00:58,  1.02it/s]  5%|▍         | 3/62 [00:02<00:53,  1.10it/s]  6%|▋         | 4/62 [00:03<00:50,  1.14it/s]  8%|▊         | 5/62 [00:04<00:48,  1.18it/s] 10%|▉         | 6/62 [00:05<00:46,  1.21it/s] 11%|█▏        | 7/62 [00:06<00:44,  1.23it/s] 13%|█▎        | 8/62 [00:06<00:44,  1.22it/s] 15%|█▍        | 9/62 [00:07<00:43,  1.21it/s] 16%|█▌        | 10/62 [00:08<00:43,  1.20it/s] 18%|█▊        | 11/62 [00:09<00:42,  1.19it/s] 19%|█▉        | 12/62 [00:10<00:42,  1.17it/s] 21%|██        | 13/62 [00:11<00:41,  1.18it/s] 23%|██▎       | 14/62 [00:11<00:40,  1.19it/s] 24%|██▍       | 15/62 [00:12<00:39,  1.20it/s] 26%|██▌       | 16/62 [00:13<00:37,  1.22it/s] 27%|██▋       | 17/62 [00:14<00:36,  1.24it/s] 29%|██▉       | 18/62 [00:15<00:35,  1.24it/s] 31%|███       | 19/62 [00:15<00:34,  1.24it/s] 32%|███▏      | 20/62 [00:16<00:33,  1.25it/s] 34%|███▍      | 21/62 [00:17<00:32,  1.25it/s] 35%|███▌      | 22/62 [00:18<00:32,  1.25it/s] 37%|███▋      | 23/62 [00:19<00:31,  1.23it/s] 39%|███▊      | 24/62 [00:20<00:31,  1.22it/s] 40%|████      | 25/62 [00:20<00:30,  1.20it/s] 42%|████▏     | 26/62 [00:21<00:30,  1.19it/s] 44%|████▎     | 27/62 [00:22<00:29,  1.20it/s] 45%|████▌     | 28/62 [00:23<00:28,  1.21it/s] 47%|████▋     | 29/62 [00:24<00:27,  1.22it/s] 48%|████▊     | 30/62 [00:24<00:26,  1.22it/s] 50%|█████     | 31/62 [00:25<00:25,  1.23it/s] 52%|█████▏    | 32/62 [00:26<00:24,  1.24it/s] 53%|█████▎    | 33/62 [00:27<00:23,  1.23it/s] 55%|█████▍    | 34/62 [00:28<00:22,  1.24it/s] 56%|█████▋    | 35/62 [00:28<00:21,  1.25it/s] 58%|█████▊    | 36/62 [00:29<00:20,  1.24it/s] 60%|█████▉    | 37/62 [00:30<00:20,  1.24it/s] 61%|██████▏   | 38/62 [00:31<00:19,  1.23it/s] 63%|██████▎   | 39/62 [00:32<00:19,  1.16it/s] 65%|██████▍   | 40/62 [00:33<00:18,  1.16it/s] 66%|██████▌   | 41/62 [00:34<00:17,  1.17it/s] 68%|██████▊   | 42/62 [00:34<00:17,  1.17it/s] 69%|██████▉   | 43/62 [00:35<00:15,  1.19it/s] 71%|███████   | 44/62 [00:36<00:14,  1.21it/s] 73%|███████▎  | 45/62 [00:37<00:13,  1.23it/s] 74%|███████▍  | 46/62 [00:38<00:12,  1.25it/s] 76%|███████▌  | 47/62 [00:38<00:11,  1.25it/s] 77%|███████▋  | 48/62 [00:39<00:11,  1.26it/s] 79%|███████▉  | 49/62 [00:40<00:10,  1.25it/s] 81%|████████  | 50/62 [00:41<00:09,  1.24it/s] 82%|████████▏ | 51/62 [00:42<00:09,  1.22it/s] 84%|████████▍ | 52/62 [00:42<00:08,  1.22it/s] 85%|████████▌ | 53/62 [00:43<00:07,  1.20it/s] 87%|████████▋ | 54/62 [00:44<00:06,  1.19it/s] 89%|████████▊ | 55/62 [00:45<00:05,  1.20it/s] 90%|█████████ | 56/62 [00:46<00:04,  1.21it/s] 92%|█████████▏| 57/62 [00:47<00:04,  1.21it/s] 94%|█████████▎| 58/62 [00:47<00:03,  1.22it/s] 95%|█████████▌| 59/62 [00:48<00:02,  1.24it/s] 97%|█████████▋| 60/62 [00:49<00:01,  1.24it/s] 98%|█████████▊| 61/62 [00:50<00:00,  1.25it/s]100%|██████████| 62/62 [00:50<00:00,  1.33it/s]100%|██████████| 62/62 [00:50<00:00,  1.22it/s]
+2022-10-08 18:56:40, INFO:ProDA:Overall Acc: 	: 0.6459516139293494
+2022-10-08 18:56:40, INFO:ProDA:Mean Acc : 	: 0.5917984903986956
+2022-10-08 18:56:40, INFO:ProDA:FreqW Acc : 	: 0.4953886023176777
+2022-10-08 18:56:40, INFO:ProDA:Mean IoU : 	: 0.4231932882127042
+2022-10-08 18:56:40, INFO:ProDA:0: 0.04575514248043918
+2022-10-08 18:56:40, INFO:ProDA:1: 0.31467130278503
+2022-10-08 18:56:40, INFO:ProDA:2: 0.3366508394843807
+2022-10-08 18:56:40, INFO:ProDA:3: 0.3653357189365731
+2022-10-08 18:56:40, INFO:ProDA:4: 0.6128597540838153
+2022-10-08 18:56:40, INFO:ProDA:5: 0.5049023368241051
+2022-10-08 18:56:40, INFO:ProDA:6: 0.6100476670550818
+2022-10-08 18:56:40, INFO:ProDA:7: 0.5953235440522083
+2022-10-08 18:56:41, INFO:ProDA:Best iou until now is 0.4232785666011576
+2022-10-08 18:57:47, INFO:ProDA:Epochs [50/80] Iter [3020/90000]  loss: 2.2556  loss_CTS: 2.0321  loss_consist: 0.0223 Time/Image: 0.5789
+2022-10-08 18:58:50, INFO:ProDA:Epochs [50/80] Iter [3040/90000]  loss: 1.9740  loss_CTS: 1.7964  loss_consist: 0.0178 Time/Image: 0.5503
+2022-10-08 18:59:53, INFO:ProDA:Epochs [51/80] Iter [3060/90000]  loss: 2.2714  loss_CTS: 1.8784  loss_consist: 0.0393 Time/Image: 0.5513
+2022-10-08 19:00:56, INFO:ProDA:Epochs [51/80] Iter [3080/90000]  loss: 2.1620  loss_CTS: 1.8511  loss_consist: 0.0311 Time/Image: 0.5497
+2022-10-08 19:01:59, INFO:ProDA:Epochs [51/80] Iter [3100/90000]  loss: 2.6361  loss_CTS: 2.3643  loss_consist: 0.0272 Time/Image: 0.5502
+2022-10-08 19:03:02, INFO:ProDA:Epochs [52/80] Iter [3120/90000]  loss: 2.7968  loss_CTS: 2.0989  loss_consist: 0.0698 Time/Image: 0.5503
+2022-10-08 19:04:05, INFO:ProDA:Epochs [52/80] Iter [3140/90000]  loss: 2.3101  loss_CTS: 1.9714  loss_consist: 0.0339 Time/Image: 0.5517
+2022-10-08 19:05:08, INFO:ProDA:Epochs [52/80] Iter [3160/90000]  loss: 1.8512  loss_CTS: 1.6191  loss_consist: 0.0232 Time/Image: 0.5497
+2022-10-08 19:06:12, INFO:ProDA:Epochs [53/80] Iter [3180/90000]  loss: 2.0078  loss_CTS: 1.7064  loss_consist: 0.0301 Time/Image: 0.5503
+2022-10-08 19:07:16, INFO:ProDA:Epochs [53/80] Iter [3200/90000]  loss: 2.1095  loss_CTS: 1.7318  loss_consist: 0.0378 Time/Image: 0.5578
+2022-10-08 19:08:20, INFO:ProDA:Epochs [53/80] Iter [3220/90000]  loss: 2.2411  loss_CTS: 1.7051  loss_consist: 0.0536 Time/Image: 0.5517
+2022-10-08 19:09:23, INFO:ProDA:Epochs [54/80] Iter [3240/90000]  loss: 1.8793  loss_CTS: 1.5528  loss_consist: 0.0326 Time/Image: 0.5502
+2022-10-08 19:10:26, INFO:ProDA:Epochs [54/80] Iter [3260/90000]  loss: 3.1821  loss_CTS: 2.6296  loss_consist: 0.0552 Time/Image: 0.5507
+2022-10-08 19:11:29, INFO:ProDA:Epochs [54/80] Iter [3280/90000]  loss: 2.3393  loss_CTS: 1.9770  loss_consist: 0.0362 Time/Image: 0.5488
+2022-10-08 19:12:33, INFO:ProDA:Epochs [55/80] Iter [3300/90000]  loss: 2.9503  loss_CTS: 2.6177  loss_consist: 0.0333 Time/Image: 0.5507
+2022-10-08 19:13:36, INFO:ProDA:Epochs [55/80] Iter [3320/90000]  loss: 1.6229  loss_CTS: 1.2688  loss_consist: 0.0354 Time/Image: 0.5503
+2022-10-08 19:14:39, INFO:ProDA:Epochs [55/80] Iter [3340/90000]  loss: 2.0139  loss_CTS: 1.6627  loss_consist: 0.0351 Time/Image: 0.5488
+2022-10-08 19:15:42, INFO:ProDA:Epochs [56/80] Iter [3360/90000]  loss: 2.3028  loss_CTS: 1.9990  loss_consist: 0.0304 Time/Image: 0.5488
+2022-10-08 19:16:46, INFO:ProDA:Epochs [56/80] Iter [3380/90000]  loss: 2.1817  loss_CTS: 1.9353  loss_consist: 0.0246 Time/Image: 0.5568
+2022-10-08 19:17:51, INFO:ProDA:Epochs [56/80] Iter [3400/90000]  loss: 2.4137  loss_CTS: 2.1365  loss_consist: 0.0277 Time/Image: 0.5629
+2022-10-08 19:19:06, INFO:ProDA:Epochs [57/80] Iter [3420/90000]  loss: 2.7394  loss_CTS: 2.2513  loss_consist: 0.0488 Time/Image: 0.6246
+2022-10-08 19:20:12, INFO:ProDA:Epochs [57/80] Iter [3440/90000]  loss: 2.4211  loss_CTS: 2.0927  loss_consist: 0.0328 Time/Image: 0.5642
+2022-10-08 19:21:17, INFO:ProDA:Epochs [57/80] Iter [3460/90000]  loss: 1.9051  loss_CTS: 1.6448  loss_consist: 0.0260 Time/Image: 0.5632
+2022-10-08 19:22:22, INFO:ProDA:Epochs [58/80] Iter [3480/90000]  loss: 2.2383  loss_CTS: 1.8748  loss_consist: 0.0364 Time/Image: 0.5628
+2022-10-08 19:23:27, INFO:ProDA:Epochs [58/80] Iter [3500/90000]  loss: 2.6134  loss_CTS: 2.2577  loss_consist: 0.0356 Time/Image: 0.5639
+2022-10-08 19:24:32, INFO:ProDA:Epochs [58/80] Iter [3520/90000]  loss: 2.4559  loss_CTS: 2.1477  loss_consist: 0.0308 Time/Image: 0.5637
+2022-10-08 19:25:38, INFO:ProDA:Epochs [59/80] Iter [3540/90000]  loss: 1.9392  loss_CTS: 1.5820  loss_consist: 0.0357 Time/Image: 0.5647
+2022-10-08 19:26:43, INFO:ProDA:Epochs [59/80] Iter [3560/90000]  loss: 2.0835  loss_CTS: 1.7681  loss_consist: 0.0315 Time/Image: 0.5666
+2022-10-08 19:27:49, INFO:ProDA:Epochs [59/80] Iter [3580/90000]  loss: 2.1008  loss_CTS: 1.8847  loss_consist: 0.0216 Time/Image: 0.5652
+2022-10-08 19:28:54, INFO:ProDA:Epochs [59/80] Iter [3600/90000]  loss: 1.5177  loss_CTS: 1.2111  loss_consist: 0.0307 Time/Image: 0.5678
+2022-10-08 19:29:59, INFO:ProDA:Epochs [60/80] Iter [3620/90000]  loss: 1.9486  loss_CTS: 1.6941  loss_consist: 0.0255 Time/Image: 0.5659
+2022-10-08 19:31:05, INFO:ProDA:Epochs [60/80] Iter [3640/90000]  loss: 2.1612  loss_CTS: 1.8639  loss_consist: 0.0297 Time/Image: 0.5666
+2022-10-08 19:32:10, INFO:ProDA:Epochs [60/80] Iter [3660/90000]  loss: 2.9373  loss_CTS: 2.5400  loss_consist: 0.0397 Time/Image: 0.5664
+2022-10-08 19:33:16, INFO:ProDA:Epochs [61/80] Iter [3680/90000]  loss: 2.7375  loss_CTS: 2.3739  loss_consist: 0.0364 Time/Image: 0.5663
+2022-10-08 19:34:21, INFO:ProDA:Epochs [61/80] Iter [3700/90000]  loss: 1.9511  loss_CTS: 1.7337  loss_consist: 0.0217 Time/Image: 0.5646
+2022-10-08 19:35:26, INFO:ProDA:Epochs [61/80] Iter [3720/90000]  loss: 1.7177  loss_CTS: 1.4472  loss_consist: 0.0270 Time/Image: 0.5650
+2022-10-08 19:36:31, INFO:ProDA:Epochs [62/80] Iter [3740/90000]  loss: 2.4843  loss_CTS: 1.9237  loss_consist: 0.0561 Time/Image: 0.5661
+2022-10-08 19:37:37, INFO:ProDA:Epochs [62/80] Iter [3760/90000]  loss: 2.7942  loss_CTS: 2.3448  loss_consist: 0.0449 Time/Image: 0.5663
+2022-10-08 19:38:42, INFO:ProDA:Epochs [62/80] Iter [3780/90000]  loss: 2.9726  loss_CTS: 2.5821  loss_consist: 0.0391 Time/Image: 0.5677
+2022-10-08 19:39:47, INFO:ProDA:Epochs [63/80] Iter [3800/90000]  loss: 2.6219  loss_CTS: 2.2019  loss_consist: 0.0420 Time/Image: 0.5679
+2022-10-08 19:40:52, INFO:ProDA:Epochs [63/80] Iter [3820/90000]  loss: 1.6122  loss_CTS: 1.4353  loss_consist: 0.0177 Time/Image: 0.5647
+2022-10-08 19:41:57, INFO:ProDA:Epochs [63/80] Iter [3840/90000]  loss: 1.5493  loss_CTS: 1.3941  loss_consist: 0.0155 Time/Image: 0.5655
+2022-10-08 19:43:03, INFO:ProDA:Epochs [64/80] Iter [3860/90000]  loss: 1.9020  loss_CTS: 1.6292  loss_consist: 0.0273 Time/Image: 0.5647
+2022-10-08 19:44:07, INFO:ProDA:Epochs [64/80] Iter [3880/90000]  loss: 2.6722  loss_CTS: 2.2242  loss_consist: 0.0448 Time/Image: 0.5629
+2022-10-08 19:45:12, INFO:ProDA:Epochs [64/80] Iter [3900/90000]  loss: 2.4473  loss_CTS: 1.9871  loss_consist: 0.0460 Time/Image: 0.5629
+2022-10-08 19:46:18, INFO:ProDA:Epochs [65/80] Iter [3920/90000]  loss: 3.1044  loss_CTS: 2.8633  loss_consist: 0.0241 Time/Image: 0.5658
+2022-10-08 19:47:23, INFO:ProDA:Epochs [65/80] Iter [3940/90000]  loss: 3.3315  loss_CTS: 2.5880  loss_consist: 0.0743 Time/Image: 0.5660
+2022-10-08 19:48:28, INFO:ProDA:Epochs [65/80] Iter [3960/90000]  loss: 2.0600  loss_CTS: 1.7470  loss_consist: 0.0313 Time/Image: 0.5672
+2022-10-08 19:49:33, INFO:ProDA:Epochs [66/80] Iter [3980/90000]  loss: 1.8758  loss_CTS: 1.5804  loss_consist: 0.0295 Time/Image: 0.5638
+2022-10-08 19:50:38, INFO:ProDA:Epochs [66/80] Iter [4000/90000]  loss: 1.7094  loss_CTS: 1.4662  loss_consist: 0.0243 Time/Image: 0.5664
+2022-10-08 19:50:38, INFO:ProDA:learning rate is 9.599297188994932e-05 for ResNet101 net
+2022-10-08 19:50:38, INFO:ProDA:Successfully set the model eval mode
+Overall Acc: 	 0.6459516139293494
+Mean Acc : 	 0.5917984903986956
+FreqW Acc : 	 0.4953886023176777
+Mean IoU : 	 0.4231932882127042
+Epochs [50/80] Iter [3020/90000]  loss: 2.2556  loss_CTS: 2.0321  loss_consist: 0.0223 Time/Image: 0.5789
+Epochs [50/80] Iter [3040/90000]  loss: 1.9740  loss_CTS: 1.7964  loss_consist: 0.0178 Time/Image: 0.5503
+Epochs [51/80] Iter [3060/90000]  loss: 2.2714  loss_CTS: 1.8784  loss_consist: 0.0393 Time/Image: 0.5513
+Epochs [51/80] Iter [3080/90000]  loss: 2.1620  loss_CTS: 1.8511  loss_consist: 0.0311 Time/Image: 0.5497
+Epochs [51/80] Iter [3100/90000]  loss: 2.6361  loss_CTS: 2.3643  loss_consist: 0.0272 Time/Image: 0.5502
+Epochs [52/80] Iter [3120/90000]  loss: 2.7968  loss_CTS: 2.0989  loss_consist: 0.0698 Time/Image: 0.5503
+Epochs [52/80] Iter [3140/90000]  loss: 2.3101  loss_CTS: 1.9714  loss_consist: 0.0339 Time/Image: 0.5517
+Epochs [52/80] Iter [3160/90000]  loss: 1.8512  loss_CTS: 1.6191  loss_consist: 0.0232 Time/Image: 0.5497
+Epochs [53/80] Iter [3180/90000]  loss: 2.0078  loss_CTS: 1.7064  loss_consist: 0.0301 Time/Image: 0.5503
+Epochs [53/80] Iter [3200/90000]  loss: 2.1095  loss_CTS: 1.7318  loss_consist: 0.0378 Time/Image: 0.5578
+Epochs [53/80] Iter [3220/90000]  loss: 2.2411  loss_CTS: 1.7051  loss_consist: 0.0536 Time/Image: 0.5517
+Epochs [54/80] Iter [3240/90000]  loss: 1.8793  loss_CTS: 1.5528  loss_consist: 0.0326 Time/Image: 0.5502
+Epochs [54/80] Iter [3260/90000]  loss: 3.1821  loss_CTS: 2.6296  loss_consist: 0.0552 Time/Image: 0.5507
+Epochs [54/80] Iter [3280/90000]  loss: 2.3393  loss_CTS: 1.9770  loss_consist: 0.0362 Time/Image: 0.5488
+Epochs [55/80] Iter [3300/90000]  loss: 2.9503  loss_CTS: 2.6177  loss_consist: 0.0333 Time/Image: 0.5507
+Epochs [55/80] Iter [3320/90000]  loss: 1.6229  loss_CTS: 1.2688  loss_consist: 0.0354 Time/Image: 0.5503
+Epochs [55/80] Iter [3340/90000]  loss: 2.0139  loss_CTS: 1.6627  loss_consist: 0.0351 Time/Image: 0.5488
+Epochs [56/80] Iter [3360/90000]  loss: 2.3028  loss_CTS: 1.9990  loss_consist: 0.0304 Time/Image: 0.5488
+Epochs [56/80] Iter [3380/90000]  loss: 2.1817  loss_CTS: 1.9353  loss_consist: 0.0246 Time/Image: 0.5568
+Epochs [56/80] Iter [3400/90000]  loss: 2.4137  loss_CTS: 2.1365  loss_consist: 0.0277 Time/Image: 0.5629
+Epochs [57/80] Iter [3420/90000]  loss: 2.7394  loss_CTS: 2.2513  loss_consist: 0.0488 Time/Image: 0.6246
+Epochs [57/80] Iter [3440/90000]  loss: 2.4211  loss_CTS: 2.0927  loss_consist: 0.0328 Time/Image: 0.5642
+Epochs [57/80] Iter [3460/90000]  loss: 1.9051  loss_CTS: 1.6448  loss_consist: 0.0260 Time/Image: 0.5632
+Epochs [58/80] Iter [3480/90000]  loss: 2.2383  loss_CTS: 1.8748  loss_consist: 0.0364 Time/Image: 0.5628
+Epochs [58/80] Iter [3500/90000]  loss: 2.6134  loss_CTS: 2.2577  loss_consist: 0.0356 Time/Image: 0.5639
+Epochs [58/80] Iter [3520/90000]  loss: 2.4559  loss_CTS: 2.1477  loss_consist: 0.0308 Time/Image: 0.5637
+Epochs [59/80] Iter [3540/90000]  loss: 1.9392  loss_CTS: 1.5820  loss_consist: 0.0357 Time/Image: 0.5647
+Epochs [59/80] Iter [3560/90000]  loss: 2.0835  loss_CTS: 1.7681  loss_consist: 0.0315 Time/Image: 0.5666
+Epochs [59/80] Iter [3580/90000]  loss: 2.1008  loss_CTS: 1.8847  loss_consist: 0.0216 Time/Image: 0.5652
+Epochs [59/80] Iter [3600/90000]  loss: 1.5177  loss_CTS: 1.2111  loss_consist: 0.0307 Time/Image: 0.5678
+Epochs [60/80] Iter [3620/90000]  loss: 1.9486  loss_CTS: 1.6941  loss_consist: 0.0255 Time/Image: 0.5659
+Epochs [60/80] Iter [3640/90000]  loss: 2.1612  loss_CTS: 1.8639  loss_consist: 0.0297 Time/Image: 0.5666
+Epochs [60/80] Iter [3660/90000]  loss: 2.9373  loss_CTS: 2.5400  loss_consist: 0.0397 Time/Image: 0.5664
+Epochs [61/80] Iter [3680/90000]  loss: 2.7375  loss_CTS: 2.3739  loss_consist: 0.0364 Time/Image: 0.5663
+Epochs [61/80] Iter [3700/90000]  loss: 1.9511  loss_CTS: 1.7337  loss_consist: 0.0217 Time/Image: 0.5646
+Epochs [61/80] Iter [3720/90000]  loss: 1.7177  loss_CTS: 1.4472  loss_consist: 0.0270 Time/Image: 0.5650
+Epochs [62/80] Iter [3740/90000]  loss: 2.4843  loss_CTS: 1.9237  loss_consist: 0.0561 Time/Image: 0.5661
+Epochs [62/80] Iter [3760/90000]  loss: 2.7942  loss_CTS: 2.3448  loss_consist: 0.0449 Time/Image: 0.5663
+Epochs [62/80] Iter [3780/90000]  loss: 2.9726  loss_CTS: 2.5821  loss_consist: 0.0391 Time/Image: 0.5677
+Epochs [63/80] Iter [3800/90000]  loss: 2.6219  loss_CTS: 2.2019  loss_consist: 0.0420 Time/Image: 0.5679
+Epochs [63/80] Iter [3820/90000]  loss: 1.6122  loss_CTS: 1.4353  loss_consist: 0.0177 Time/Image: 0.5647
+Epochs [63/80] Iter [3840/90000]  loss: 1.5493  loss_CTS: 1.3941  loss_consist: 0.0155 Time/Image: 0.5655
+Epochs [64/80] Iter [3860/90000]  loss: 1.9020  loss_CTS: 1.6292  loss_consist: 0.0273 Time/Image: 0.5647
+Epochs [64/80] Iter [3880/90000]  loss: 2.6722  loss_CTS: 2.2242  loss_consist: 0.0448 Time/Image: 0.5629
+Epochs [64/80] Iter [3900/90000]  loss: 2.4473  loss_CTS: 1.9871  loss_consist: 0.0460 Time/Image: 0.5629
+Epochs [65/80] Iter [3920/90000]  loss: 3.1044  loss_CTS: 2.8633  loss_consist: 0.0241 Time/Image: 0.5658
+Epochs [65/80] Iter [3940/90000]  loss: 3.3315  loss_CTS: 2.5880  loss_consist: 0.0743 Time/Image: 0.5660
+Epochs [65/80] Iter [3960/90000]  loss: 2.0600  loss_CTS: 1.7470  loss_consist: 0.0313 Time/Image: 0.5672
+Epochs [66/80] Iter [3980/90000]  loss: 1.8758  loss_CTS: 1.5804  loss_consist: 0.0295 Time/Image: 0.5638
+Epochs [66/80] Iter [4000/90000]  loss: 1.7094  loss_CTS: 1.4662  loss_consist: 0.0243 Time/Image: 0.5664
+  0%|          | 0/62 [00:00<?, ?it/s]  2%|▏         | 1/62 [00:01<01:04,  1.05s/it]  3%|▎         | 2/62 [00:01<00:57,  1.04it/s]  5%|▍         | 3/62 [00:02<00:55,  1.07it/s]  6%|▋         | 4/62 [00:03<00:52,  1.11it/s]  8%|▊         | 5/62 [00:04<00:50,  1.13it/s] 10%|▉         | 6/62 [00:05<00:48,  1.15it/s] 11%|█▏        | 7/62 [00:06<00:47,  1.16it/s] 13%|█▎        | 8/62 [00:07<00:45,  1.18it/s] 15%|█▍        | 9/62 [00:07<00:44,  1.19it/s] 16%|█▌        | 10/62 [00:08<00:43,  1.19it/s] 18%|█▊        | 11/62 [00:09<00:43,  1.17it/s] 19%|█▉        | 12/62 [00:10<00:43,  1.16it/s] 21%|██        | 13/62 [00:11<00:42,  1.15it/s] 23%|██▎       | 14/62 [00:12<00:41,  1.14it/s] 24%|██▍       | 15/62 [00:13<00:41,  1.14it/s] 26%|██▌       | 16/62 [00:14<00:40,  1.14it/s] 27%|██▋       | 17/62 [00:14<00:39,  1.15it/s] 29%|██▉       | 18/62 [00:15<00:37,  1.17it/s] 31%|███       | 19/62 [00:16<00:36,  1.18it/s] 32%|███▏      | 20/62 [00:17<00:35,  1.18it/s] 34%|███▍      | 21/62 [00:18<00:34,  1.18it/s] 35%|███▌      | 22/62 [00:19<00:34,  1.17it/s] 37%|███▋      | 23/62 [00:19<00:33,  1.15it/s] 39%|███▊      | 24/62 [00:20<00:33,  1.15it/s] 40%|████      | 25/62 [00:21<00:32,  1.13it/s] 42%|████▏     | 26/62 [00:22<00:31,  1.14it/s] 44%|████▎     | 27/62 [00:23<00:30,  1.14it/s] 45%|████▌     | 28/62 [00:24<00:29,  1.15it/s] 47%|████▋     | 29/62 [00:25<00:28,  1.16it/s] 48%|████▊     | 30/62 [00:26<00:27,  1.16it/s] 50%|█████     | 31/62 [00:26<00:26,  1.17it/s] 52%|█████▏    | 32/62 [00:27<00:25,  1.18it/s] 53%|█████▎    | 33/62 [00:28<00:24,  1.16it/s] 55%|█████▍    | 34/62 [00:29<00:24,  1.13it/s] 56%|█████▋    | 35/62 [00:30<00:23,  1.13it/s] 58%|█████▊    | 36/62 [00:31<00:23,  1.12it/s] 60%|█████▉    | 37/62 [00:32<00:22,  1.13it/s] 61%|██████▏   | 38/62 [00:33<00:21,  1.13it/s] 63%|██████▎   | 39/62 [00:34<00:20,  1.13it/s] 65%|██████▍   | 40/62 [00:34<00:19,  1.15it/s] 66%|██████▌   | 41/62 [00:35<00:17,  1.17it/s] 68%|██████▊   | 42/62 [00:36<00:17,  1.17it/s] 69%|██████▉   | 43/62 [00:37<00:16,  1.17it/s] 71%|███████   | 44/62 [00:38<00:15,  1.17it/s] 73%|███████▎  | 45/62 [00:39<00:14,  1.16it/s] 74%|███████▍  | 46/62 [00:39<00:13,  1.16it/s] 76%|███████▌  | 47/62 [00:40<00:13,  1.14it/s] 77%|███████▋  | 48/62 [00:41<00:12,  1.13it/s] 79%|███████▉  | 49/62 [00:42<00:11,  1.13it/s] 81%|████████  | 50/62 [00:43<00:10,  1.14it/s] 82%|████████▏ | 51/62 [00:44<00:09,  1.16it/s] 84%|████████▍ | 52/62 [00:45<00:08,  1.18it/s] 85%|████████▌ | 53/62 [00:46<00:07,  1.18it/s] 87%|████████▋ | 54/62 [00:46<00:06,  1.19it/s] 89%|████████▊ | 55/62 [00:47<00:05,  1.18it/s] 90%|█████████ | 56/62 [00:48<00:05,  1.17it/s] 92%|█████████▏| 57/62 [00:49<00:04,  1.16it/s] 94%|█████████▎| 58/62 [00:50<00:03,  1.13it/s] 95%|█████████▌| 59/62 [00:51<00:02,  1.14it/s] 97%|█████████▋| 60/62 [00:52<00:01,  1.14it/s] 98%|█████████▊| 61/62 [00:53<00:00,  1.14it/s]100%|██████████| 62/62 [00:53<00:00,  1.22it/s]100%|██████████| 62/62 [00:53<00:00,  1.15it/s]
+2022-10-08 19:51:33, INFO:ProDA:Overall Acc: 	: 0.6579040702989702
+2022-10-08 19:51:33, INFO:ProDA:Mean Acc : 	: 0.5939969537467406
+2022-10-08 19:51:33, INFO:ProDA:FreqW Acc : 	: 0.5051643247102537
+2022-10-08 19:51:33, INFO:ProDA:Mean IoU : 	: 0.43633078633342565
+2022-10-08 19:51:33, INFO:ProDA:0: 0.047323807930529115
+2022-10-08 19:51:33, INFO:ProDA:1: 0.30286470114866193
+2022-10-08 19:51:33, INFO:ProDA:2: 0.32984357365520994
+2022-10-08 19:51:33, INFO:ProDA:3: 0.37456270511371
+2022-10-08 19:51:33, INFO:ProDA:4: 0.6267856481139431
+2022-10-08 19:51:33, INFO:ProDA:5: 0.5660313051773399
+2022-10-08 19:51:33, INFO:ProDA:6: 0.6346885606281099
+2022-10-08 19:51:33, INFO:ProDA:7: 0.6085459888999014
+2022-10-08 19:51:35, INFO:ProDA:Best iou until now is 0.43633078633342565
+2022-10-08 19:52:42, INFO:ProDA:Epochs [66/80] Iter [4020/90000]  loss: 1.3120  loss_CTS: 1.1528  loss_consist: 0.0159 Time/Image: 0.5925
+2022-10-08 19:53:47, INFO:ProDA:Epochs [67/80] Iter [4040/90000]  loss: 2.7836  loss_CTS: 2.4963  loss_consist: 0.0287 Time/Image: 0.5662
+2022-10-08 19:54:52, INFO:ProDA:Epochs [67/80] Iter [4060/90000]  loss: 1.2297  loss_CTS: 1.0082  loss_consist: 0.0221 Time/Image: 0.5652
+2022-10-08 19:55:57, INFO:ProDA:Epochs [67/80] Iter [4080/90000]  loss: 2.0384  loss_CTS: 1.7460  loss_consist: 0.0292 Time/Image: 0.5667
+2022-10-08 19:57:02, INFO:ProDA:Epochs [68/80] Iter [4100/90000]  loss: 2.3140  loss_CTS: 2.0337  loss_consist: 0.0280 Time/Image: 0.5670
+2022-10-08 19:58:08, INFO:ProDA:Epochs [68/80] Iter [4120/90000]  loss: 2.0726  loss_CTS: 1.7024  loss_consist: 0.0370 Time/Image: 0.5643
+2022-10-08 19:59:13, INFO:ProDA:Epochs [68/80] Iter [4140/90000]  loss: 2.0921  loss_CTS: 1.8536  loss_consist: 0.0238 Time/Image: 0.5654
+2022-10-08 20:00:18, INFO:ProDA:Epochs [69/80] Iter [4160/90000]  loss: 2.3709  loss_CTS: 1.8350  loss_consist: 0.0536 Time/Image: 0.5653
+2022-10-08 20:01:23, INFO:ProDA:Epochs [69/80] Iter [4180/90000]  loss: 2.2930  loss_CTS: 1.6938  loss_consist: 0.0599 Time/Image: 0.5683
+2022-10-08 20:02:30, INFO:ProDA:Epochs [69/80] Iter [4200/90000]  loss: 1.2699  loss_CTS: 1.0845  loss_consist: 0.0185 Time/Image: 0.5732
+2022-10-08 20:03:35, INFO:ProDA:Epochs [70/80] Iter [4220/90000]  loss: 2.4106  loss_CTS: 1.8686  loss_consist: 0.0542 Time/Image: 0.5678
+2022-10-08 20:04:40, INFO:ProDA:Epochs [70/80] Iter [4240/90000]  loss: 1.8009  loss_CTS: 1.5827  loss_consist: 0.0218 Time/Image: 0.5640
+2022-10-08 20:05:45, INFO:ProDA:Epochs [70/80] Iter [4260/90000]  loss: 2.6996  loss_CTS: 2.1263  loss_consist: 0.0573 Time/Image: 0.5659
+2022-10-08 20:06:51, INFO:ProDA:Epochs [71/80] Iter [4280/90000]  loss: 1.9145  loss_CTS: 1.5109  loss_consist: 0.0404 Time/Image: 0.5662
+2022-10-08 20:07:57, INFO:ProDA:Epochs [71/80] Iter [4300/90000]  loss: 1.9200  loss_CTS: 1.6552  loss_consist: 0.0265 Time/Image: 0.5669
+2022-10-08 20:09:02, INFO:ProDA:Epochs [71/80] Iter [4320/90000]  loss: 2.6858  loss_CTS: 1.7409  loss_consist: 0.0945 Time/Image: 0.5667
+2022-10-08 20:10:07, INFO:ProDA:Epochs [72/80] Iter [4340/90000]  loss: 2.8844  loss_CTS: 2.2865  loss_consist: 0.0598 Time/Image: 0.5657
+2022-10-08 20:11:12, INFO:ProDA:Epochs [72/80] Iter [4360/90000]  loss: 1.3611  loss_CTS: 1.2259  loss_consist: 0.0135 Time/Image: 0.5660
+2022-10-08 20:12:17, INFO:ProDA:Epochs [72/80] Iter [4380/90000]  loss: 2.4908  loss_CTS: 2.2245  loss_consist: 0.0266 Time/Image: 0.5683
+2022-10-08 20:13:23, INFO:ProDA:Epochs [73/80] Iter [4400/90000]  loss: 3.0737  loss_CTS: 2.4735  loss_consist: 0.0600 Time/Image: 0.5636
+2022-10-08 20:14:28, INFO:ProDA:Epochs [73/80] Iter [4420/90000]  loss: 1.5982  loss_CTS: 1.3953  loss_consist: 0.0203 Time/Image: 0.5647
+2022-10-08 20:15:33, INFO:ProDA:Epochs [73/80] Iter [4440/90000]  loss: 1.9985  loss_CTS: 1.4651  loss_consist: 0.0533 Time/Image: 0.5668
+2022-10-08 20:16:39, INFO:ProDA:Epochs [74/80] Iter [4460/90000]  loss: 2.4382  loss_CTS: 1.8451  loss_consist: 0.0593 Time/Image: 0.5651
+2022-10-08 20:17:43, INFO:ProDA:Epochs [74/80] Iter [4480/90000]  loss: 2.1693  loss_CTS: 1.8317  loss_consist: 0.0338 Time/Image: 0.5654
+2022-10-08 20:18:49, INFO:ProDA:Epochs [74/80] Iter [4500/90000]  loss: 2.0277  loss_CTS: 1.7841  loss_consist: 0.0244 Time/Image: 0.5667
+2022-10-08 20:19:54, INFO:ProDA:Epochs [75/80] Iter [4520/90000]  loss: 2.0624  loss_CTS: 1.8670  loss_consist: 0.0195 Time/Image: 0.5672
+2022-10-08 20:20:59, INFO:ProDA:Epochs [75/80] Iter [4540/90000]  loss: 2.2133  loss_CTS: 1.9710  loss_consist: 0.0242 Time/Image: 0.5655
+2022-10-08 20:22:04, INFO:ProDA:Epochs [75/80] Iter [4560/90000]  loss: 1.9270  loss_CTS: 1.7113  loss_consist: 0.0216 Time/Image: 0.5636
+2022-10-08 20:23:18, INFO:ProDA:Epochs [76/80] Iter [4580/90000]  loss: 1.9044  loss_CTS: 1.6932  loss_consist: 0.0211 Time/Image: 0.6578
+2022-10-08 20:24:24, INFO:ProDA:Epochs [76/80] Iter [4600/90000]  loss: 2.3882  loss_CTS: 2.0907  loss_consist: 0.0298 Time/Image: 0.5645
+2022-10-08 20:25:29, INFO:ProDA:Epochs [76/80] Iter [4620/90000]  loss: 2.5412  loss_CTS: 2.2957  loss_consist: 0.0246 Time/Image: 0.5675
+2022-10-08 20:26:34, INFO:ProDA:Epochs [77/80] Iter [4640/90000]  loss: 2.1622  loss_CTS: 1.8184  loss_consist: 0.0344 Time/Image: 0.5657
+2022-10-08 20:27:39, INFO:ProDA:Epochs [77/80] Iter [4660/90000]  loss: 2.5582  loss_CTS: 2.1892  loss_consist: 0.0369 Time/Image: 0.5658
+2022-10-08 20:28:43, INFO:ProDA:Epochs [77/80] Iter [4680/90000]  loss: 1.7646  loss_CTS: 1.5984  loss_consist: 0.0166 Time/Image: 0.5661
+2022-10-08 20:29:48, INFO:ProDA:Epochs [78/80] Iter [4700/90000]  loss: 2.4929  loss_CTS: 1.8863  loss_consist: 0.0607 Time/Image: 0.5653
+2022-10-08 20:30:54, INFO:ProDA:Epochs [78/80] Iter [4720/90000]  loss: 1.8527  loss_CTS: 1.4276  loss_consist: 0.0425 Time/Image: 0.5672
+2022-10-08 20:31:59, INFO:ProDA:Epochs [78/80] Iter [4740/90000]  loss: 2.0321  loss_CTS: 1.7943  loss_consist: 0.0238 Time/Image: 0.5643
+2022-10-08 20:33:05, INFO:ProDA:Epochs [79/80] Iter [4760/90000]  loss: 2.2141  loss_CTS: 1.8836  loss_consist: 0.0330 Time/Image: 0.5646
+2022-10-08 20:34:10, INFO:ProDA:Epochs [79/80] Iter [4780/90000]  loss: 2.1249  loss_CTS: 1.9327  loss_consist: 0.0192 Time/Image: 0.5667
+2022-10-08 20:35:14, INFO:ProDA:Epochs [79/80] Iter [4800/90000]  loss: 2.3188  loss_CTS: 2.0229  loss_consist: 0.0296 Time/Image: 0.5652
+2022-10-08 20:36:20, INFO:ProDA:Epochs [79/80] Iter [4820/90000]  loss: 2.1874  loss_CTS: 1.8687  loss_consist: 0.0319 Time/Image: 0.5642
+2022-10-08 20:37:25, INFO:ProDA:Epochs [80/80] Iter [4840/90000]  loss: 1.8794  loss_CTS: 1.5043  loss_consist: 0.0375 Time/Image: 0.5651
+2022-10-08 20:38:31, INFO:ProDA:Epochs [80/80] Iter [4860/90000]  loss: 1.8029  loss_CTS: 1.5494  loss_consist: 0.0254 Time/Image: 0.5654
+2022-10-08 20:39:36, INFO:ProDA:Epochs [80/80] Iter [4880/90000]  loss: 2.5143  loss_CTS: 2.2456  loss_consist: 0.0269 Time/Image: 0.5664
+Overall Acc: 	 0.6579040702989702
+Mean Acc : 	 0.5939969537467406
+FreqW Acc : 	 0.5051643247102537
+Mean IoU : 	 0.43633078633342565
+Epochs [66/80] Iter [4020/90000]  loss: 1.3120  loss_CTS: 1.1528  loss_consist: 0.0159 Time/Image: 0.5925
+Epochs [67/80] Iter [4040/90000]  loss: 2.7836  loss_CTS: 2.4963  loss_consist: 0.0287 Time/Image: 0.5662
+Epochs [67/80] Iter [4060/90000]  loss: 1.2297  loss_CTS: 1.0082  loss_consist: 0.0221 Time/Image: 0.5652
+Epochs [67/80] Iter [4080/90000]  loss: 2.0384  loss_CTS: 1.7460  loss_consist: 0.0292 Time/Image: 0.5667
+Epochs [68/80] Iter [4100/90000]  loss: 2.3140  loss_CTS: 2.0337  loss_consist: 0.0280 Time/Image: 0.5670
+Epochs [68/80] Iter [4120/90000]  loss: 2.0726  loss_CTS: 1.7024  loss_consist: 0.0370 Time/Image: 0.5643
+Epochs [68/80] Iter [4140/90000]  loss: 2.0921  loss_CTS: 1.8536  loss_consist: 0.0238 Time/Image: 0.5654
+Epochs [69/80] Iter [4160/90000]  loss: 2.3709  loss_CTS: 1.8350  loss_consist: 0.0536 Time/Image: 0.5653
+Epochs [69/80] Iter [4180/90000]  loss: 2.2930  loss_CTS: 1.6938  loss_consist: 0.0599 Time/Image: 0.5683
+Epochs [69/80] Iter [4200/90000]  loss: 1.2699  loss_CTS: 1.0845  loss_consist: 0.0185 Time/Image: 0.5732
+Epochs [70/80] Iter [4220/90000]  loss: 2.4106  loss_CTS: 1.8686  loss_consist: 0.0542 Time/Image: 0.5678
+Epochs [70/80] Iter [4240/90000]  loss: 1.8009  loss_CTS: 1.5827  loss_consist: 0.0218 Time/Image: 0.5640
+Epochs [70/80] Iter [4260/90000]  loss: 2.6996  loss_CTS: 2.1263  loss_consist: 0.0573 Time/Image: 0.5659
+Epochs [71/80] Iter [4280/90000]  loss: 1.9145  loss_CTS: 1.5109  loss_consist: 0.0404 Time/Image: 0.5662
+Epochs [71/80] Iter [4300/90000]  loss: 1.9200  loss_CTS: 1.6552  loss_consist: 0.0265 Time/Image: 0.5669
+Epochs [71/80] Iter [4320/90000]  loss: 2.6858  loss_CTS: 1.7409  loss_consist: 0.0945 Time/Image: 0.5667
+Epochs [72/80] Iter [4340/90000]  loss: 2.8844  loss_CTS: 2.2865  loss_consist: 0.0598 Time/Image: 0.5657
+Epochs [72/80] Iter [4360/90000]  loss: 1.3611  loss_CTS: 1.2259  loss_consist: 0.0135 Time/Image: 0.5660
+Epochs [72/80] Iter [4380/90000]  loss: 2.4908  loss_CTS: 2.2245  loss_consist: 0.0266 Time/Image: 0.5683
+Epochs [73/80] Iter [4400/90000]  loss: 3.0737  loss_CTS: 2.4735  loss_consist: 0.0600 Time/Image: 0.5636
+Epochs [73/80] Iter [4420/90000]  loss: 1.5982  loss_CTS: 1.3953  loss_consist: 0.0203 Time/Image: 0.5647
+Epochs [73/80] Iter [4440/90000]  loss: 1.9985  loss_CTS: 1.4651  loss_consist: 0.0533 Time/Image: 0.5668
+Epochs [74/80] Iter [4460/90000]  loss: 2.4382  loss_CTS: 1.8451  loss_consist: 0.0593 Time/Image: 0.5651
+Epochs [74/80] Iter [4480/90000]  loss: 2.1693  loss_CTS: 1.8317  loss_consist: 0.0338 Time/Image: 0.5654
+Epochs [74/80] Iter [4500/90000]  loss: 2.0277  loss_CTS: 1.7841  loss_consist: 0.0244 Time/Image: 0.5667
+Epochs [75/80] Iter [4520/90000]  loss: 2.0624  loss_CTS: 1.8670  loss_consist: 0.0195 Time/Image: 0.5672
+Epochs [75/80] Iter [4540/90000]  loss: 2.2133  loss_CTS: 1.9710  loss_consist: 0.0242 Time/Image: 0.5655
+Epochs [75/80] Iter [4560/90000]  loss: 1.9270  loss_CTS: 1.7113  loss_consist: 0.0216 Time/Image: 0.5636
+Epochs [76/80] Iter [4580/90000]  loss: 1.9044  loss_CTS: 1.6932  loss_consist: 0.0211 Time/Image: 0.6578
+Epochs [76/80] Iter [4600/90000]  loss: 2.3882  loss_CTS: 2.0907  loss_consist: 0.0298 Time/Image: 0.5645
+Epochs [76/80] Iter [4620/90000]  loss: 2.5412  loss_CTS: 2.2957  loss_consist: 0.0246 Time/Image: 0.5675
+Epochs [77/80] Iter [4640/90000]  loss: 2.1622  loss_CTS: 1.8184  loss_consist: 0.0344 Time/Image: 0.5657
+Epochs [77/80] Iter [4660/90000]  loss: 2.5582  loss_CTS: 2.1892  loss_consist: 0.0369 Time/Image: 0.5658
+Epochs [77/80] Iter [4680/90000]  loss: 1.7646  loss_CTS: 1.5984  loss_consist: 0.0166 Time/Image: 0.5661
+Epochs [78/80] Iter [4700/90000]  loss: 2.4929  loss_CTS: 1.8863  loss_consist: 0.0607 Time/Image: 0.5653
+Epochs [78/80] Iter [4720/90000]  loss: 1.8527  loss_CTS: 1.4276  loss_consist: 0.0425 Time/Image: 0.5672
+Epochs [78/80] Iter [4740/90000]  loss: 2.0321  loss_CTS: 1.7943  loss_consist: 0.0238 Time/Image: 0.5643
+Epochs [79/80] Iter [4760/90000]  loss: 2.2141  loss_CTS: 1.8836  loss_consist: 0.0330 Time/Image: 0.5646
+Epochs [79/80] Iter [4780/90000]  loss: 2.1249  loss_CTS: 1.9327  loss_consist: 0.0192 Time/Image: 0.5667
+Epochs [79/80] Iter [4800/90000]  loss: 2.3188  loss_CTS: 2.0229  loss_consist: 0.0296 Time/Image: 0.5652
+Epochs [79/80] Iter [4820/90000]  loss: 2.1874  loss_CTS: 1.8687  loss_consist: 0.0319 Time/Image: 0.5642
+Epochs [80/80] Iter [4840/90000]  loss: 1.8794  loss_CTS: 1.5043  loss_consist: 0.0375 Time/Image: 0.5651
+Epochs [80/80] Iter [4860/90000]  loss: 1.8029  loss_CTS: 1.5494  loss_consist: 0.0254 Time/Image: 0.5654
+Epochs [80/80] Iter [4880/90000]  loss: 2.5143  loss_CTS: 2.2456  loss_consist: 0.0269 Time/Image: 0.5664

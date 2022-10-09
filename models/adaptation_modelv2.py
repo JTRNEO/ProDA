@@ -53,11 +53,11 @@ class CustomModel():
             self.BaseNet = Deeplab(BatchNorm, num_classes=self.class_numbers, freeze_bn=False, restore_from=restore_from)
         elif self.opt.student_init == 'simclr':
             self.BaseNet = Deeplab(BatchNorm, num_classes=self.class_numbers, freeze_bn=False, restore_from=restore_from, 
-                initialization=os.path.join(opt.root, 'Code/ProDA', 'pretrained/simclr/r101_1x_sk0.pth'), bn_clr=opt.bn_clr)
+                initialization=os.path.join(opt.root, 'pretrained/simclr/r101_1x_sk0.pth'), bn_clr=opt.bn_clr)
         else:
             self.BaseNet = Deeplab(BatchNorm, num_classes=self.class_numbers, freeze_bn=False, restore_from=restore_from)
             
-        logger.info('the backbone is {}'.format(opt.model_name))
+        logger.info('the backbone is {}, the checkpoint is {}'.format(opt.model_name, opt.resume_path))
 
         self.nets.extend([self.BaseNet])
 

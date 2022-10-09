@@ -5,13 +5,15 @@ import os
 import json
 
 def parser_(parser):
-    parser.add_argument('--root', type=str, default='/mnt/blob', help='root path')
+    parser.add_argument('--root', type=str, default='/home/songjian/project/ProDA', help='root path')
     parser.add_argument('--model_name', type=str, default='deeplabv2', help='deeplabv2')
     parser.add_argument('--name', type=str, default='gta2city', help='pretrain source model')
     parser.add_argument('--lr', type=float, default=0.0001)
     parser.add_argument('--bs', type=int, default=4)
+    # parser.add_argument('--bs_val', type=int, default=1)
+    
     parser.add_argument('--freeze_bn', action='store_true')
-    parser.add_argument('--epochs', type=int, default=84)
+    parser.add_argument('--epochs', type=int, default=2)
     parser.add_argument('--train_iters', type=int, default=90000)
     parser.add_argument('--moving_prototype', action='store_true')
     parser.add_argument('--bn', type=str, default='sync_bn', help='sync_bn|bn|gn|adabn')
@@ -28,22 +30,22 @@ def parser_(parser):
     parser.add_argument("--proto_momentum", default=0.0001, type=float)
     parser.add_argument("--bn_clr", action='store_true', help="if true, add a bn layer for the output of simclr model")
     #data
-    parser.add_argument('--src_dataset', type=str, default='gta5', help='gta5|synthia')
-    parser.add_argument('--tgt_dataset', type=str, default='cityscapes', help='cityscapes')
+    parser.add_argument('--src_dataset', type=str, default='Africa', help='gta5|synthia')
+    parser.add_argument('--tgt_dataset', type=str, default='Asia', help='cityscapes')
     parser.add_argument('--src_rootpath', type=str, default='Dataset/GTA5')
     parser.add_argument('--tgt_rootpath', type=str, default='Dataset/cityscapes')
-    parser.add_argument('--path_LP', type=str, default='Pseudo/pretrain_warmup/LP0.95', help='path of probability-based PLA')
-    parser.add_argument('--path_soft', type=str, default='Pseudo/pretrain_warmup_soft/LP0.0', help='soft pseudo label for rectification')
+    parser.add_argument('--path_LP', type=str, default='Pseudo/stage1', help='path of probability-based PLA')
+    parser.add_argument('--path_soft', type=str, default='Pseudo/warmup', help='soft pseudo label for rectification')
     parser.add_argument("--train_thred", default=0, type=float)
     parser.add_argument('--used_save_pseudo', action='store_true', help='if True used saved pseudo label')
     parser.add_argument('--no_droplast', action='store_true')
 
-    parser.add_argument('--resize', type=int, default=2200, help='resize long size')
-    parser.add_argument('--rcrop', type=str, default='896,512', help='rondom crop size')
+    parser.add_argument('--resize', type=int, default=1280, help='resize long size')
+    parser.add_argument('--rcrop', type=str, default='512, 512', help='rondom crop size')
     parser.add_argument('--hflip', type=float, default=0.5, help='random flip probility')
 
-    parser.add_argument('--n_class', type=int, default=19, help='19|16|13')
-    parser.add_argument('--num_workers', type=int, default=6)
+    parser.add_argument('--n_class', type=int, default=8, help='19|16|13')
+    parser.add_argument('--num_workers', type=int, default=0)
     #loss
     parser.add_argument('--gan', type=str, default='LS', help='Vanilla|LS')
     parser.add_argument('--adv', type=float, default=0.01, help='loss weight of adv loss, only use when stage=warm_up')
@@ -60,7 +62,7 @@ def parser_(parser):
 
     #print
     parser.add_argument('--print_interval', type=int, default=20, help='print loss')
-    parser.add_argument('--val_interval', type=int, default=1000, help='validate model iter')
+    parser.add_argument('--val_interval', type=int, default=100, help='validate model iter')
 
     parser.add_argument('--noshuffle', action='store_true', help='do not use shuffle')
     parser.add_argument('--noaug', action='store_true', help='do not use data augmentation')
@@ -73,10 +75,18 @@ def parser_(parser):
 
 def relative_path_to_absolute_path(opt):
     opt.rcrop = [int(opt.rcrop.split(',')[0]), int(opt.rcrop.split(',')[1])]
-    opt.resume_path = os.path.join(opt.root, 'Code/ProDA', opt.resume_path)
-    opt.src_rootpath = os.path.join(opt.root, opt.src_rootpath)
-    opt.tgt_rootpath = os.path.join(opt.root, opt.tgt_rootpath)
-    opt.path_LP = os.path.join(opt.root, 'Code/ProDA', opt.path_LP)
-    opt.path_soft = os.path.join(opt.root, 'Code/ProDA', opt.path_soft)
-    opt.logdir = os.path.join(opt.root, 'Code/ProDA', 'logs', opt.name)
+    if opt.src_dataset and opt.tgt_dataset in ['gt5', 'synthia', 'cityscapes']:
+        opt.src_rootpath = os.path.join(opt.root, opt.src_rootpath)
+        opt.tgt_rootpath = os.path.join(opt.root, opt.tgt_rootpath)
+    else:    
+        opt.src_rootpath = os.path.join(opt.root, 'continent_trainval', opt.src_dataset)
+        opt.tgt_rootpath = os.path.join(opt.root, 'continent_trainval', opt.tgt_dataset)
+    path = opt.src_dataset + '2' + opt.tgt_dataset
+    opt.logdir = os.path.join(opt.root, 'logs_debug', path)
+    stages = ['warm_up', 'stage1', 'stage2', 'stage3']
+    index = stages.index(opt.stage)
+    opt.resume_path = os.path.join(opt.logdir, stages[index-1], 
+                                   "from_{}_to_{}_on_{}_best_model.pkl".format(opt.src_dataset, opt.tgt_dataset, opt.model_name)) if index>0 else None
+    opt.path_LP = os.path.join(opt.logdir, opt.path_LP)
+    opt.path_soft = os.path.join(opt.logdir, opt.path_soft)
     return opt
